@@ -2,7 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/dhas",
+  pathPrefix: "/direct-hearing-aid-service-workspace",
   siteMetadata: {
     title: `direct-hearing-aid-service-gatsby-webapp`,
     siteUrl: `https://www.yourdomain.tld`,
