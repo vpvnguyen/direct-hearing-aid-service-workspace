@@ -5,6 +5,7 @@ module.exports = {
   pathPrefix: "/direct-hearing-aid-service-workspace",
   siteMetadata: {
     title: `Direct Hearing Aid Services`,
+    siteUrl: 'https://vincentnguyen.dev/'
   },
   plugins: [
     "gatsby-plugin-emotion",
