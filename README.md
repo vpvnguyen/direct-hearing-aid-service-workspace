@@ -1,4 +1,4 @@
-# direct-hearing-aid-service-workspace
+# Direct Hearing Aid Service Workspace
 
 ## Yarn Workspaces
 
