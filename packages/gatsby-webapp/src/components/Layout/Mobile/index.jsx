@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "../../../styles/reset.joshwcomeau.css";
-import logo from "../../../images/direct-hearing-aid-services-logo.jpeg";
 
 const MobileLayout = ({ children }) => {
   return (
@@ -29,7 +28,7 @@ const MobileLayout = ({ children }) => {
           })}
         >
           <StaticImage
-            src={logo}
+            src='../../../images/direct-hearing-aid-services-logo.jpeg'
             alt="logo"
             placeholder="blurred"
             layout="fixed"
