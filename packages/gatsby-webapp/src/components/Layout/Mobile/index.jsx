@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "../../../styles/reset.joshwcomeau.css";
+import Navbar from "../../Navbar/Navbar";
 
 const MobileLayout = ({ children }) => {
   return (
     <div
       id="mobile-layout"
-      style={{ lineHeight: "2rem" }}
       css={(theme) => ({ fontFamily: theme.fonts.fontFamily, margin: 0 })}
     >
-      <header
+      {/* <header
         css={(theme) => ({
           position: "fixed",
           zIndex: 2,
@@ -123,11 +123,12 @@ const MobileLayout = ({ children }) => {
             Contact Us
           </Link>
         </nav>
-      </header>
+      </header> */}
+      <Navbar />
       <main
         css={(theme) => ({
           minHeight: "100vh",
-          padding: "300px 2rem 2rem",
+          padding: "150px 2rem 2rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -152,5 +153,41 @@ const MobileLayout = ({ children }) => {
     </div>
   );
 };
+
+// const MobileLayout = ({ children }) => {
+//   return (
+//     <div
+//       id="mobile-layout"
+//       css={(theme) => ({ fontFamily: theme.fonts.fontFamily, margin: 0 })}
+//     >
+//       <Navbar />
+//       <main
+//         css={(theme) => ({
+//           minHeight: "100vh",
+//           padding: "300px 2rem 2rem",
+//           display: "flex",
+//           flexDirection: "column",
+//           justifyContent: "center",
+//           alignItems: "center",
+//         })}
+//       >
+//         <div css={(theme) => ({ maxWidth: "900px" })}>{children}</div>
+//       </main>
+//       <footer
+//         css={(theme) => ({
+//           minHeight: "250px",
+//           padding: "1rem",
+//           backgroundColor: theme.colors.indigo,
+//           color: theme.colors.white,
+//           display: "flex",
+//           flexDirection: "column",
+//           alignItems: "center",
+//         })}
+//       >
+//         <div css={(theme) => ({ maxWidth: "900px" })}>FOOTER</div>
+//       </footer>
+//     </div>
+//   );
+// };
 
 export default MobileLayout;
