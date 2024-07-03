@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import "../../../styles/reset.joshwcomeau.css";
 import logo from "../../../images/direct-hearing-aid-services-logo.jpeg";
 
@@ -27,7 +28,12 @@ const MobileLayout = ({ children }) => {
             justifyContent: "space-between",
           })}
         >
-          <img src={logo} alt="logo" />
+          <StaticImage
+            src={logo}
+            alt="logo"
+            placeholder="blurred"
+            layout="fixed"
+          />
           <div
             css={(theme) => ({
               backgroundColor: theme.colors.indigo,

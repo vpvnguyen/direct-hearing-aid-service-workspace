@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import "../../../styles/reset.joshwcomeau.css";
 import logo from "../../../images/direct-hearing-aid-services-logo.jpeg";
 
@@ -67,8 +68,12 @@ const DesktopLayout = ({ children }) => {
             padding: "0rem 6rem",
           })}
         >
-          <img src={logo} alt="logo" />
-
+          <StaticImage
+            src={logo}
+            alt="logo"
+            placeholder="blurred"
+            layout="fixed"
+          />
           <nav
             css={(theme) => ({
               flex: 1,
