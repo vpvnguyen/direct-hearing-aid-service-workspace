@@ -80,7 +80,7 @@ const Layout = ({ children }) => {
             })}
           >
             <Link
-              href="/"
+              to="/"
               css={(theme) => ({
                 color: theme.colors.indigo,
                 "&:hover": {
@@ -91,7 +91,7 @@ const Layout = ({ children }) => {
               Home
             </Link>
             <Link
-              href="/services"
+              to="/services"
               css={(theme) => ({
                 color: theme.colors.indigo,
                 "&:hover": {
@@ -102,7 +102,7 @@ const Layout = ({ children }) => {
               Services
             </Link>
             <Link
-              href="/contact"
+              to="/contact"
               css={(theme) => ({
                 color: theme.colors.indigo,
                 "&:hover": {
