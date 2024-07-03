@@ -4,8 +4,7 @@
 module.exports = {
   pathPrefix: "/direct-hearing-aid-service-workspace",
   siteMetadata: {
-    title: `direct-hearing-aid-service-gatsby-webapp`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Direct Hearing Aid Services`,
   },
   plugins: [
     "gatsby-plugin-emotion",
@@ -36,6 +35,17 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+        queries: {
+          xs: "(max-width: 320px)",
+          sm: "(max-width: 720px)",
+          md: "(max-width: 1024px)",
+          l: "(max-width: 1536px)",
+        },
+      },
     },
   ],
 };
