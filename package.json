@@ -1,0 +1,19 @@
+{
+  "name": "direct-hearing-aid-service-workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vpvnguyen/direct-hearing-aid-service-workspace.git",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "gatsby:install": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp install",
+    "gatsby:add": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp add",
+    "gatsby:develop": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run develop",
+    "gatsby:build": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run build",
+    "gatsby:serve": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run serve",
+    "gatsby:clean": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run clean"
+  }
+}
