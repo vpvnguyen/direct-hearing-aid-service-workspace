@@ -1,423 +1,50 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.13.6"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/dhas/sitemap-index.xml"/><link rel="icon" href="/dhas/favicon-32x32.png?v=53aa06cf17e4239d0dba6ffd09854e02" type="image/png"/><link rel="manifest" href="/dhas/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/dhas/icons/icon-48x48.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="72x72" href="/dhas/icons/icon-72x72.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="96x96" href="/dhas/icons/icon-96x96.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="144x144" href="/dhas/icons/icon-144x144.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="192x192" href="/dhas/icons/icon-192x192.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="256x256" href="/dhas/icons/icon-256x256.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="384x384" href="/dhas/icons/icon-384x384.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="512x512" href="/dhas/icons/icon-512x512.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><title data-gatsby-head="true">Home Page</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div align="center">
-<div id="fixme" style="display:none"><img src="images/arrow.png" onclick="window.location='repairform.php'" style="cursor:pointer" title="Click to Send In Your Hearing Aid for Repair"></div>
-<table width="993" border="0" cellspacing="0" cellpadding="0" background="https://www.directhearingaidservice.com/images/contentbg.jpg" align="center">
-  <tbody><tr>
-    <td valign="top" align="center"><table width="947" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td background="https://www.directhearingaidservice.com/images/headerbg.jpg"><table width="947" border="0" cellspacing="0" cellpadding="0">
-      <tbody><tr>
-        <td width="318"><a href="https://www.directhearingaidservice.com/index.php"><img src="https://www.directhearingaidservice.com/images/logo.jpg" width="318" height="96" border="0" title="Welcome to DIRECT HEARING AID SERVICES"></a></td>
-        <td width="629" align="right" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td align="right" class="calltoaction" style="padding-top:4px;">Call Today for Fast, Reasonable, Hearing Aid Repair</td>
-  </tr>
-  <tr>
-    <td align="right" class="Phonenumber">1-888-580-HEAR (4327)</td>
-  </tr>
-  <tr>
-    <td align="right" class="Phonenumber">1-714-534-EARS (3277)</td>
-  </tr>
-</tbody></table>
-
-		
-		<br>
-		<!--
-		<table width="350" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td width="27" align="right"><img src="< ?php echo WEB_PATH;?>images/nav/cart.gif" width="20" height="17" /></td>
-            <td width="100" align="left"><a href="< ?php echo WEB_PATH;?>showcart.php" title="Shopping Cart">Shopping Cart</a> </td>
-            <td width="52" align="center"><font color="#285049" style="font-size:15px;">< ?php
-			if(isset($_GET['prdid']) && !empty($_GET['prdid'])){
-				if(!isset($_SESSION['cart']) || ($_SESSION['cart'] != 1))
-					{
-						$_SESSION['cart'] = 1;
-						$q2 = "insert into shoppingcarts(customerid) values(0)";
-						mysql_query($q2) or die($q2);
-						
-						$q2 = "select MAX(id) from shoppingcarts";
-						$rs2 = mysql_query($q2) or die("An error occured while getting id for shopping cart");
-						
-						$row = mysql_fetch_row($rs2);
-						$_SESSION['cartid'] = $row[0];
-					}
-			}
-
-			if(isset($_SESSION['cart']) && $_SESSION['cart'] == 1){
-			
-			if(isset($_GET['prdid']))
-	{
-		$type = "product";
-			
-		$q2 = "select * from shoppingcartdetail where shoppingcartid = ".$_SESSION['cartid']." and 
-			productid = ".$_GET['prdid']." and type = '".$type."'";
-		$rs2 = mysql_query($q2) or die("An error occured while checking for product in shopping cart");
-		
-		$num_results = mysql_num_rows($rs2);
-		if($num_results == 1) // update quantity
-		{
-			$row = mysql_fetch_array($rs2);
-			$quantity = $row['quantity'];
-			
-			//---------------------------------------------------
-					$itemtotal = ++$quantity * $row['price'];
-			//---------------------------------------------------
-			$q2 = "update shoppingcartdetail set quantity = ".($quantity).", itemtotal = ".$itemtotal." where shoppingcartid = ".
-					$_SESSION['cartid']." and productid = ".$_GET['prdid'];
-			$rs2 = mysql_query($q2) or die("An error occured while updating quantity of product in shopping cart");
-		}
-		else                  //insert new product
-		{
-			if(!isset($_GET['seminar']) && !isset($_GET['book']))
-			{
-				$q2 = "select products.title, products.price, products.description,products.serialright,products.serialleft,products.warrentydate from products where products.id = ".$_GET['prdid'];
-				$type = "product";
-				$rs2 = mysql_query($q2) or die($q2);
-				
-				$row2 = mysql_fetch_array($rs2);
-				mysql_free_result($rs2);
-				
-				if(isset($_SESSION['member_id']) && $row2['specialprice'] != 0)
-					$price = $row2['specialprice'];
-				else
-					$price = $row2['price'];
-				
-				$title = $row2['title'];
-				$description = $row2['description'];
-				$serialright= $row2['serialright'];
-				$serialleft= $row2['serialleft'];
-				if($warrentydate=="" && empty($warrentydate))
-				$warrentydate= "NULL";
-				else 
-				$warrentydate= $row2['warrentydate'];
-			}
-			
-	
-if(isset($_POST['modrelatedprod']) && $_POST['modrelatedprod']==2){
-			$q2 = "insert into shoppingcartdetail(shoppingcartid,productid,quantity, title, price, itemtotal, type,description) values(".$_SESSION['cartid']
-					.",".$_GET['prdid'].",1,'".$_POST['itemname']."',".$_POST['price'].",".$_POST['price'].",'".$_POST['product']."','".addslashes($_POST['itemdescription'])."')";
-
-}else{
-			$q2 = "insert into shoppingcartdetail(shoppingcartid,productid,quantity, title, price, itemtotal, type, description,serialright,serialleft,warrentydate) values(".$_SESSION['cartid']
-					.",".$_GET['prdid'].",1,'".$title."',".$price.",".$price.",'".$type."','".addslashes($description)."','".$serialright."','".$serialleft."',".$warrentydate.")";
-}
-					
-			mysql_query($q2) or die($q2);
-		}
-		
-	}//if !empty productid
-	else 
-		if(isset($_GET['update']) && $_GET['update'] == 1)//update quantity from text boxes
-		{
-			$q2 = "select * from shoppingcartdetail where shoppingcartid = "
-					.$_SESSION['cartid'];
-			// echo $q2."<br>";
-			$rs2 = mysql_query($q2) or die("An error occured while checking count in shopping cart");
-			$num_results = mysql_num_rows($rs2);
-			
-			for($i = 0 ; $i < $num_results ; $i++)
-  			{
-				$row = mysql_fetch_array($rs2);
-				$productid = $row['productid']; 
-				
-				$itemtotal = $_POST[$productid] * $row['price'];
-			//---------------------------------------------------------
-				
-				//names of quantity textboxes are product ids
-				$q2 = "update shoppingcartdetail set quantity = ".$_POST[$productid].", itemtotal = ".$itemtotal." where shoppingcartid = ".
-					$_SESSION['cartid']." and productid = ".$productid;
-				//echo $q2."<br>";
-				mysql_query($q2) or die("An error occured while updating quantity of products in shopping cart");
-			}
-		}
-		else //delete from shopping cart
-			if(!empty($_GET['del']))
-			{
-				 $q2 = "delete from shoppingcartdetail where id=".$_GET['del'];
-			 	 mysql_query($q2) or die("An error occured while removing product from shopping cart");
-				 
-				$q2 = "select count(id) as count from shoppingcartdetail where shoppingcartid = ".$_SESSION['cartid']."";
-				$rs2 = mysql_query($q2) or die("An error occured while checking for product in shopping cart");
-				$row = mysql_fetch_array($rs2);
-				if($row['count']==0){
-					if(isset($_SESSION['cartpayment']['grandtotal'])) unset($_SESSION['cartpayment']['grandtotal']);
-				}
-			}
-			
-			
-			
-			
-            $q2 = "select count(id) as count, sum(itemtotal) as total from shoppingcartdetail where shoppingcartid = ".$_SESSION['cartid']."";
-            $rs2 = mysql_query($q2) or die("An error occured while checking for product in shopping cart");
-            $row = mysql_fetch_array($rs2);
-            if($row['count'] > 0)
-            { echo $row['count']; } else {echo '0';}
-			if($row['count']==0){unset($_SESSION['cartpayment']['grandtotal']);}
-			} else echo '0';?></font>&nbsp;Items </td>
-            <td width="120" align="right">Total 
-			<font color="#285049" style="font-size:15px;">$< ?php if(isset($_SESSION['cart']) && $_SESSION['cart'] == 1){ if($row['total']!='' && !empty($row['total'])){ echo number_format($row['total'],2);} else { echo '0.00';} } else echo '0.00';?></font></td>
-            </tr>
-        </table>
-		-->
-		</td>
-      </tr>
-    </tbody></table></td>
-  </tr>
-  <tr>
-    <td height="30" background="https://www.directhearingaidservice.com/images/nav/navbg.gif" style="background-position:bottom;" align="left"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><!-- dynamic menus -->
-<link rel="stylesheet" type="text/css" href="https://www.directhearingaidservice.com/menu/css/superfish.css" media="screen">
-<script type="text/javascript" src="https://www.directhearingaidservice.com/menu/js/jquery-1.2.6.min.js"></script>
-<script type="text/javascript" src="https://www.directhearingaidservice.com/menu/js/hoverIntent.js"></script>
-<script type="text/javascript" src="https://www.directhearingaidservice.com/menu/js/superfish.js"></script>
-<script type="text/javascript">
-
-// initialise plugins
-jQuery(function(){
-	jQuery('ul.sf-menu').superfish();
-});
-
-</script>
-<!-- end dynamic menus -->
-
-<ul class="sf-menu sf-js-enabled sf-shadow"><li class=""><a href="https://www.directhearingaidservice.com/index.php" title="Home">Home</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=2" title="What Makes Us Unique">What Makes Us Unique</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=9" title="Products &amp; Services" class="sf-with-ul">Products &amp; Services<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=51" title="Universal Sanitizer Dryer">Universal Sanitizer Dryer</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=23" title="$135 Internet Repair Special">$135 Internet Repair Special</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=18" title="Repair Service" class="sf-with-ul">Repair Service<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=57" title="Parts">Parts</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=28" title="Choosing A Hearing Aid Repair Lab">Choosing A Hearing Aid Repair Lab</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=23" title="Class 1 Hearing Aid Repair?">Class 1 Hearing Aid Repair?</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=29" title="Class 1 Digital and Power Repair">Class 1 Digital and Power Repair</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=24" title="Class 2 Hearing Aid Repair?">Class 2 Hearing Aid Repair?</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=25" title="Class 3 Hearing Aid Repair?">Class 3 Hearing Aid Repair?</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=26" title="Class 4 Hearing Aid Repair?">Class 4 Hearing Aid Repair?</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=27" title="Class 5 Hearing Aid Repair?">Class 5 Hearing Aid Repair?</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=31" title="Hearing Aid Re-Programming Service">Hearing Aid Re-Programming Service</a></li></ul></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=19" title="Maintenance Plans" class="sf-with-ul">Maintenance Plans<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=60" title="Same Day Service">Same Day Service</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=30" title="Extended Warranty">Extended Warranty</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=32" title="Clean and Check">Clean and Check</a></li></ul></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=20" title="Accessories" class="sf-with-ul">Accessories<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=63" title="Box of Dry Bricks">Box of Dry Bricks</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=62" title="Box of battery">Box of battery</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=59" title="Dry Brick">Dry Brick</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=58" title="Super-Dry AId">Super-Dry AId</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=54" title="Battery Holder">Battery Holder</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=49" title="Super Dri-Aid">Super Dri-Aid</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=36" title="Batteries">Batteries</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=37" title="Battery Tester">Battery Tester</a></li></ul></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=21" title="Shipping" class="sf-with-ul">Shipping<span class="sf-sub-indicator"> »</span></a><ul style="display: none; visibility: hidden;"><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=50" title="Priority Mail by USPS">Priority Mail by USPS</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=33" title="Rush Delivery (Next Day Ship Out)">Rush Delivery (Next Day Ship Out)</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=34" title="Regular Delivery">Regular Delivery</a></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=35" title="UPS 2 DAYS">UPS 2 DAYS</a></li></ul></li><li class=""><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=22" title="Hearing Aid Re-Programming Service">Hearing Aid Re-Programming Service</a></li></ul></li><li class=""><a href="https://www.directhearingaidservice.com/testimonials.php" title="Testimonials">Testimonials</a></li><li class=""><a href="https://www.directhearingaidservice.com/repairform.php" title="Repair Form">Repair Form</a></li><li class=""><a href="https://www.directhearingaidservice.com/orderform.php" title="Order Form">Order Form</a></li><li class=""><a href="https://www.directhearingaidservice.com/contactus.php" title="Contact">Contact</a></li></ul></td></tr></tbody></table></td>
-  </tr>
-  <tr>
-    <td style="background-image:url(https://www.directhearingaidservice.com/images/1.jpg); background-repeat:no-repeat;" height="253" valign="bottom"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td width="226">&nbsp;</td>
-    <td width="315" style="padding-bottom:14px;"><a style="color:blue" href="https://www.directhearingaidservice.com/sitepage.php?pageid=23" title="Click Here for Details"><font style="font-size:19px;">Click Here for Details</font></a></td>
-    <td width="315">&nbsp;</td>
-  </tr>
-</tbody></table>
-</td>
-  </tr>
-  <tr>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tbody><tr>
-        <td valign="top" style="padding-top:12px;" align="left"><title>Direct Hearing Aid Services</title>
-<table width="947" border="0" cellspacing="0" cellpadding="0">
-          <tbody><tr>
-            <td width="552" valign="top" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tbody><tr>
-                <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
-	<tbody>
-		<tr>
-			<td>
-				<table bgcolor="#d6eae5" border="0" cellpadding="0" cellspacing="0" width="100%">
-					<tbody>
-						<tr>
-							<td background="images/lefttop.gif" class="heading">
-								Direct Hearing Aid Repair Services is your One-Stop shop for all your repair needs:</td>
-						</tr>
-						<tr>
-							<td height="200" valign="top">
-								<ul>
-									<li>
-										Most Hearing Aids can be repaired regardless of age to save you money.</li>
-									<li>
-										Offers 48-hour "in-house" turnaround on most <a href="http://www.directhearingaidservice.com/sitepage.php?pageid=9">hearing aid repair</a> so you can get your Hearing back faster.</li>
-									<li>
-										Technicians are factory trained &amp;&nbsp;ertified with 20+ years of experience in <a href="http://www.directhearingaidservice.com/sitepage.php?pageid=28">hearing aid service</a>.</li>
-									<li>
-										Offers same day pick-up for the Los Angeles and Orange County areas.</li>
-									<li>
-										Provides new faceplates and upgrades on most custom models.</li>
-									<li>
-										Re-casing available on ALL custom&nbsp; models to extend the life of your Hearing Aid.</li>
-									<li>
-										Offers refurbished BTE (Behind the Ear)&nbsp; Hearing Aids for just $345.00 with One-year Guarantee.</li>
-									<li>
-										Extended "Worry-Free" Warranty on our <a href="http://www.directhearingaidservice.com/sitepage.php?pageid=9">hearing aid repair service</a> available for an additional six months - <font color="#285049" style="font-size: 18px;"><strong>$99.59</strong></font></li>
-								</ul>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</td>
-		</tr>
-		<tr>
-			<td style="padding-top: 10px;">
-				<table bgcolor="#d6eae5" border="0" cellpadding="0" cellspacing="0" width="100%">
-					<tbody>
-						<tr>
-							<td background="images/lefttop.gif" class="heading">
-								Repair any custom-made hearing aid, regardless of age or manufacturer!</td>
-						</tr>
-						<tr>
-							<td valign="top">
-								<ul>
-									<li>
-										You can have a new custom Shell made for ANY&nbsp; reason.</li>
-									<li>
-										Repair, Upgrade, &amp; Convert to a Digital Circuit to improve sound quality.</li>
-									<li>
-										Repair the electronic components from any Custom or Behind-the-Ear Hearing Aid</li>
-									<li>
-										Most Brands of Hearing Aids&nbsp; can be Repaired in the Lab for <a href="http://www.directhearingaidservice.com/sitepage.php?pageid=28">Hearing Aid Repair, Garden Grove</a> CA, and sent back by Mail or Courier within 24 to 48 hours.</li>
-								</ul>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</td>
-		</tr>
-	</tbody>
-</table></td>
-              </tr>
-              <tr>
-                <td style="padding-top:6px;"></td>
-              </tr>
-              <tr>
-                <td style="padding-top:6px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/bottomboxbg.gif">
-                  <tbody><tr>
-                    <td height="286" valign="top" style="padding-top:12px;" align="center"><table width="522" border="0" cellspacing="0" cellpadding="0">
-                      <tbody><tr>
-                        <td width="10"><img src="images/boxleft.png"></td>
-                        <td bgcolor="#FFFFFF" width="502" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td width="242"><img src="images/pic.jpg"></td>
-    <td align="left" valign="top"><table width="230" border="0" cellspacing="0" cellpadding="6" align="center">
-      <tbody><tr>
-        <td width="12" valign="top"><img src="images/dot.jpg" width="9" height="9" vspace="6"></td>
-        <td width="172" valign="top"><font color="#285049" style="font-size:18px;"><strong>$99.95</strong></font><br>for most Hearing Aid Repairs</td>
-      </tr>
-      <tr>
-        <td valign="top"><img src="images/dot.jpg" width="9" height="9" vspace="6"></td>
-        <td valign="top"><font color="#285049" style="font-size:18px;"><strong>$19.95</strong></font><br>
-          Clean and check Hearing 
-Aids</td>
-      </tr>
-      <tr>
-        <td valign="top"><img src="images/dot.jpg" width="9" height="9" vspace="6"></td>
-        <td valign="top"><font color="#285049" style="font-size:18px;"><strong>$3.00</strong></font><br>Package of batteries</td>
-      </tr>
-    </tbody></table></td>
-  </tr>
-</tbody></table></td>
-                        <td width="10"><img src="images/boxright.png"></td>
-                      </tr>
-                      <tr>
-                        <td colspan="3" align="right" style="padding-top:10px;"><a href="orderform.php"><img src="images/nav/learnmore.gif" title="Learn More" border="0"></a></td>
-                        </tr>
-                    </tbody></table></td>
-                  </tr>
-                </tbody></table></td>
-              </tr>
-            </tbody></table></td>
-            <td width="10">&nbsp;</td>
-            <td width="385" valign="top" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tbody><tr>
-                <td>		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:solid 1px #d3d3d3" bgcolor="#eeeeee">
-                  <tbody><tr>
-                    <td background="images/boxtop.gif" height="38" class="heading" valign="top">FREE Report: Repair or Replace?</td>
-          </tr>
-          <tr>
-            <td align="left"><table width="96%" border="0" cellpadding="0" cellspacing="8">
-                <form action="subscription.php" method="post" name="theform" id="theform" onsubmit="return validatex(this)"></form>
-                  <tbody><tr>
-                    <td colspan="2" align="left" class="emailcatchertitle">Top 10 questions you must ask about hearing aid repair before you decide<br><br></td>
-                  </tr>
-                  <tr>
-                    <td valign="top" align="center"><strong>Name:</strong></td>
-                    <td valign="top" align="left"><input name="name" type="text" class="txtField" size="32" id="name"></td>
-                  </tr>
-                  <tr>
-                    <td align="center"><strong>Email:</strong></td>
-                    <td align="left"><input name="email" type="text" class="txtField" id="email" size="32"></td>
-                  </tr>
-                  <tr>
-                    <td height="30" align="center">&nbsp;</td>
-                    <td height="30" align="right"><div align="rigth" style="padding-right:70px;">
-                      <input type="image" name="imageField" src="images/nav/go.jpg" title="Submit">
-                    </div></td>
-                  </tr>
-                
-              </tbody></table></td>
-          </tr>
-        </tbody></table>
-						
-				</td>
-              </tr>
-              <tr>
-                <td style="padding-top:6px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:solid 1px #d3d3d3" bgcolor="#eeeeee">
-                  <tbody><tr>
-                    <td background="images/boxtop.gif" height="38" class="heading" valign="top">Hearing Aid Repair</td>
-                  </tr>
-                  <tr>
-                    <td height="150" valign="top" align="center"><table width="380" border="0" cellspacing="0" cellpadding="4">
-                      <tbody><tr>
-                        <td valign="top" width="155"><img src="images/pic2.jpg"></td>
-                        <td width="225" valign="top"><font style="font-size:28px"><strong>YES</strong></font><br>
-<font style="font-size:16px;">I want same or next<br> day Hearing Aid Repair</font>
-<p align="right"><a href="sitepage.php?pageid=21"><img src="images/nav/learnmore.jpg" border="0" title="Learn More"></a></p></td>
-                      </tr>
-                    </tbody></table></td>
-                  </tr>
-                </tbody></table></td>
-              </tr>
-              <tr>
-                <td style="padding-top:6px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:solid 1px #d3d3d3" bgcolor="#eeeeee">
-                  <tbody><tr>
-                    <td background="images/boxtop.gif" height="38" class="heading" valign="top">Testimonials</td>
-                  </tr>
-                  <tr>
-                    <td height="334" valign="top" align="center" style="padding-top:6px;"><div id="testimoanl" style="width:320px; text-align:left">You guys are amazing!&nbsp; You fixed my hearing aid when I thought I would ...<br><br><strong><em>John William</em></strong>
-<br><hr noshade="noshade" width="90%" size="1"><br>
-I promised to write you a glowing testimonial when this was over, but I ...<br><br><strong><em>Nick Johnson</em></strong>
-<br><hr noshade="noshade" width="90%" size="1"><br>
-Thomas, your team of repair technicians is amazing!&nbsp; I was a bit worried ...<br><br><strong><em>Sarah Lane</em></strong>
-<div align="right"><a href="testimonials.php" title="more"><img src="images/nav/more.gif" border="0" title="more" vspace="3"></a></div>
-</div></td>
-                  </tr>
-                </tbody></table></td>
-              </tr>
-            </tbody></table></td>
-          </tr>
-        </tbody></table>
-</td>
-      </tr>
-    </tbody></table></td>
-  </tr>
-  <tr>
-    <td style="padding-top:12px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tbody><tr>
-        <td bgcolor="#eeeeee" height="35" style="border:solid 1px #d3d3d3;p"><table width="947" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td align="left" class="footer" width="260">©2024 directhearingaidservice.com</td>
-  <td align="right"><table width="500" border="0" cellspacing="0" cellpadding="0" class="footer">
-  <tbody><tr>
-    <td class="footer" align="left"><a href="https://www.directhearingaidservice.com/index.php" title="home">home</a></td>
-    <td width="2"><img src="https://www.directhearingaidservice.com/images/seprator.jpg" width="2" height="14"></td>
-    <td align="center" class="footer"><a href="https://www.directhearingaidservice.com/orderform.php" title="order form">order form</a></td>
-    <td width="2"><img src="https://www.directhearingaidservice.com/images/seprator.jpg" width="2" height="14"></td>
-    <td align="center" class="footer"><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=14" title="return policy">return policy</a></td>
-    <td width="2"><img src="https://www.directhearingaidservice.com/images/seprator.jpg" width="2" height="14"></td>
-    <td align="center" class="footer"><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=11" title="privacy policy">privacy policy</a></td>
-    <td width="2"><img src="https://www.directhearingaidservice.com/images/seprator.jpg" width="2" height="14"></td>
-    <td align="center" class="footer"><a href="https://www.directhearingaidservice.com/articles.php" title="articles">articles</a></td>
-    <td width="2"><img src="https://www.directhearingaidservice.com/images/seprator.jpg" width="2" height="14"></td>
-    <td align="center" class="footer"><a href="https://www.directhearingaidservice.com/sitepage.php?pageid=48" title="helpful sites">helpful sites</a></td>
-    <td width="2"><img src="https://www.directhearingaidservice.com/images/seprator.jpg" width="2" height="14"></td>
-    <td align="center" class="footer"><a href="https://www.directhearingaidservice.com/contactus.php" title="contact">contact</a>&nbsp;&nbsp;</td>
-  </tr>
-</tbody></table>
-</td>
-  </tr></tbody></table>
-
-</td>
-      </tr>
-      <tr>
-        <td height="20">&nbsp;</td>
-      </tr>
-    </tbody></table></td>
-  </tr>
-</tbody></table>
-</td>
-  </tr>
-</tbody></table>
-</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.13.6"/><style data-href="/dhas/styles.105d37d70da67d3dce10.css" data-identity="gatsby-global-css">*,:after,:before{box-sizing:border-box}*{margin:0}body{-webkit-font-smoothing:antialiased;line-height:1.5}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}#__next,#root{isolation:isolate}a,a:active,a:focus,a:hover,a:link,a:visited{text-decoration:none}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/dhas/sitemap-index.xml"/><link rel="icon" href="/dhas/favicon-32x32.png?v=53aa06cf17e4239d0dba6ffd09854e02" type="image/png"/><link rel="manifest" href="/dhas/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/dhas/icons/icon-48x48.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="72x72" href="/dhas/icons/icon-72x72.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="96x96" href="/dhas/icons/icon-96x96.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="144x144" href="/dhas/icons/icon-144x144.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="192x192" href="/dhas/icons/icon-192x192.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="256x256" href="/dhas/icons/icon-256x256.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="384x384" href="/dhas/icons/icon-384x384.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="apple-touch-icon" sizes="512x512" href="/dhas/icons/icon-512x512.png?v=53aa06cf17e4239d0dba6ffd09854e02"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/><html lang="en"></html><body class="my-body-class"></body><title>Direct Hearing Aid Services</title><title data-gatsby-head="true">Home</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css syqnha">.css-syqnha{font-family:"Poppins",sans-serif;margin:0;}</style><div style="border:1px solid black;line-height:2rem" class="css-syqnha"><header style="min-height:50px;box-shadow:0 0 15px rgba(0,0,0,.1);transition:top .3s ease"><style data-emotion="css 13osd0r">.css-13osd0r{background-color:#2c2a49;color:white;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:space-around;-ms-flex-pack:space-around;-webkit-justify-content:space-around;justify-content:space-around;padding:1rem;}</style><div class="css-13osd0r"><style data-emotion="css p7c5j5">.css-p7c5j5{color:#a5a4b3;}</style><p class="css-p7c5j5">Open Hours:<style data-emotion="css 1rk659q">.css-1rk659q{color:#fff;padding-left:0.75rem;}</style><span class="css-1rk659q">Mon-Fri 8:00 am-6:00 pm</span></p><p class="css-p7c5j5">Phone:<span class="css-1rk659q">+91-213-666-0027</span></p><p class="css-p7c5j5">Email:<span class="css-1rk659q">info@example.com</span></p></div><style data-emotion="css 1bnxa12">.css-1bnxa12{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:space-around;-ms-flex-pack:space-around;-webkit-justify-content:space-around;justify-content:space-around;}</style><div class="css-1bnxa12"><img src="/dhas/static/direct-hearing-aid-services-logo-5ae5efa2948c9516765364975aa6ad30.jpeg" alt="logo"/><style data-emotion="css sea2cn">.css-sea2cn{-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:6rem;}</style><nav class="css-sea2cn"><style data-emotion="css 11l4mxz">.css-11l4mxz{color:#2c2a49;}.css-11l4mxz:hover{color:#ff7558;}</style><a href="/" class="css-11l4mxz">Home</a><a href="/services" class="css-11l4mxz">Services</a><a href="/contact" class="css-11l4mxz">Contact Us</a></nav></div></header><style data-emotion="css 1a6umga">.css-1a6umga{min-height:100vh;padding:2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><main class="css-1a6umga"><style data-emotion="css 9ztcfk">.css-9ztcfk{border:none;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;-webkit-transition:.5s ease;transition:.5s ease;position:relative;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;overflow:hidden;padding:17px 35px 16px;text-align:center;z-index:1;letter-spacing:1px;font-weight:600;text-transform:uppercase;background-color:#ff7558;color:white;cursor:pointer;}.css-9ztcfk:hover{-webkit-text-decoration:none;text-decoration:none;outline:none;border:none;-webkit-transition:.3s;transition:.3s;background-color:#2c2a49;}</style><button class="css-9ztcfk easxg890">Button</button><style data-emotion="css 12dqb46">.css-12dqb46{-webkit-transition:.5s ease;transition:.5s ease;position:relative;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;overflow:hidden;padding:17px 35px 16px;text-align:center;z-index:1;letter-spacing:1px;font-weight:600;text-transform:uppercase;background-color:#ff7558;color:white;cursor:pointer;}.css-12dqb46:hover{-webkit-text-decoration:none;text-decoration:none;outline:none;border:none;-webkit-transition:.3s;transition:.3s;background-color:#2c2a49;}</style><a class="css-12dqb46 e1k8eqre0">ButtonLink</a><style data-emotion="css 10rvlso">.css-10rvlso{max-width:900px;}</style><div class="css-10rvlso"><div><h1>Home Page</h1><div style="padding-top:6rem">
+<div id="Inner">
+<h1>Lorem Ipsum</h1>
+<br>
+<h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+<h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
+<br>
+<div id="Content">
+<div id="bannerL"><!-- Tag ID: lipsumcom_left_siderail -->
+<div align="center" data-freestar-ad="__300x600" id="lipsumcom_left_siderail">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "lipsumcom_left_siderail", slotId: "lipsumcom_left_siderail" });
+  </script>
+</div></div>
+<div id="bannerR"><!-- Tag ID: lipsumcom_right_siderail -->
+<div align="center" data-freestar-ad="__300x600" id="lipsumcom_right_siderail">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "lipsumcom_right_siderail", slotId: "lipsumcom_right_siderail" });
+  </script>
+</div></div>
+<div class="boxed"><div id="lipsum">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac pretium metus, sit amet faucibus velit. Fusce laoreet ultrices arcu, et placerat quam viverra tempus. Nulla ut dictum sem, non mattis lorem. Phasellus laoreet id nisl quis porttitor. Integer dolor enim, condimentum ut viverra in, dignissim ut lacus. Curabitur vestibulum faucibus risus, ac porta leo sollicitudin vitae. Pellentesque ac viverra mi. Ut dapibus, tortor quis venenatis condimentum, augue elit sagittis mi, eget volutpat mi est et leo. Aenean volutpat lorem eget convallis ultrices.
+</p>
+<p>
+Phasellus dapibus ipsum et molestie mattis. Nullam id nisi est. Phasellus ut turpis eu sem molestie imperdiet. Praesent consequat ante sed sodales vestibulum. Cras et accumsan massa. Donec non volutpat diam. Integer ultricies turpis eu fringilla maximus. Nulla cursus condimentum eros eu semper. Cras mollis cursus ex, vitae pellentesque ante imperdiet et. Vestibulum imperdiet sollicitudin neque.
+</p>
+<br>
+<p>
+Morbi a nunc non erat consectetur mollis id ac tellus. Aenean volutpat lorem lacus, et malesuada ligula gravida eu. Mauris mattis ante erat, vitae facilisis diam efficitur nec. Nam in nibh sollicitudin est ornare egestas eu id nibh. Vestibulum massa dolor, blandit eu lacinia vel, sagittis ut urna. Nunc nec metus interdum, rhoncus lacus sed, cursus mi. Praesent rhoncus, tortor sit amet ultrices auctor, tellus leo varius diam, ornare commodo elit nulla eu tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet justo sit amet enim rutrum porttitor ut at ipsum. Nullam pharetra cursus vestibulum. Vivamus eget fermentum mi. Fusce et tortor ac risus sagittis malesuada. Duis quis iaculis erat.
+</p>
+<br>
+<p>
+Praesent convallis risus in mattis pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam mollis ultricies purus et elementum. Maecenas sed mollis leo. Etiam est est, sodales a tincidunt nec, pretium vel nisl. Fusce congue placerat dignissim. Cras consectetur mauris ac sagittis commodo. Sed cursus quis sem sed laoreet. Etiam mollis faucibus est vel fermentum. Donec mauris ligula, tincidunt vitae mauris at, consequat lacinia nisl. Proin vestibulum, sapien non commodo fringilla, lacus ante maximus urna, vitae elementum est tellus in lorem.
+</p>
+<br>
+<p>
+Sed ligula dui, pretium consectetur purus sollicitudin, varius sollicitudin ex. Donec efficitur felis eget vehicula euismod. Nunc eget tortor arcu. Quisque vel sodales orci. Sed vitae erat et lorem tincidunt accumsan. Duis volutpat tortor sapien, ut tempor diam consectetur non. In efficitur eros in ex consectetur imperdiet. Maecenas eget porta mi. Pellentesque molestie faucibus nulla ac condimentum. Nullam consequat non est at dictum. Nullam mattis finibus efficitur. Etiam pretium mauris vitae arcu dictum, quis venenatis nisl varius. Nullam malesuada leo purus, nec porttitor felis tincidunt non. Vestibulum sit amet eleifend nibh, ut aliquet orci.
+</p></div>
+<div id="generated">Generated 5 paragraphs, 432 words, 2932 bytes of <a href="https://www.lipsum.com/" title="Lorem Ipsum">Lorem Ipsum</a></div>
+</div>
+</div>
+</div>
+</div></div></div></main><style data-emotion="css qh8w25">.css-qh8w25{min-height:250px;padding:1rem;background-color:#2c2a49;color:#fff;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><footer class="css-qh8w25"><div class="css-10rvlso">FOOTER</div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-8434c8f44c0482bbf543.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-0c3c533a272ccff1e521.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ead84ed4d86dc265017d.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-8fdce1ba9679d9c91466.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-3adbbc743710ad8d3402.js\"],\"component---src-pages-contact-index-js\":[\"/component---src-pages-contact-index-js-c0a5d824220ebc17333f.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-3bdac28fbd3eea9f947e.js\"],\"component---src-pages-services-index-js\":[\"/component---src-pages-services-index-js-17c6c00b96ffcca202db.js\"],\"component---src-pages-template-js\":[\"/component---src-pages-template-js-c97060a8da9523fb22fb.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="8b8d1db86b2e355523c5";</script><script src="/dhas/webpack-runtime-f43898f4d3249ad2f9b8.js" async></script><script src="/dhas/framework-128bdf349766ab0c3e10.js" async></script><script src="/dhas/app-8434c8f44c0482bbf543.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="6071857f60e6469e1bc5";</script><script src="/dhas/webpack-runtime-970e7c3ea48993eed865.js" async></script><script src="/dhas/framework-128bdf349766ab0c3e10.js" async></script><script src="/dhas/app-8fdce1ba9679d9c91466.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
