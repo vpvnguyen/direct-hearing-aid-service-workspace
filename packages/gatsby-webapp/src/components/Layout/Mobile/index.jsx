@@ -24,14 +24,17 @@ const MobileLayout = ({ children }) => {
         <div
           css={(theme) => ({
             display: "flex",
+            flexDirection: "column",
             justifyContent: "space-between",
           })}
         >
           <StaticImage
-            src='../../../images/direct-hearing-aid-services-logo.jpeg'
+            src="../../../images/direct-hearing-aid-services-logo.jpeg"
             alt="logo"
             placeholder="blurred"
             layout="fixed"
+            height={75}
+            style={{ margin: "0 auto" }}
           />
           <div
             css={(theme) => ({
@@ -124,7 +127,7 @@ const MobileLayout = ({ children }) => {
       <main
         css={(theme) => ({
           minHeight: "100vh",
-          padding: "250px 2rem 2rem",
+          padding: "300px 2rem 2rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
