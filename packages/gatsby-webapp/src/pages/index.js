@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+// import { graphql } from "gatsby";
 import Lorem from "../components/Lorem";
 // import Animate from "../components/Animate";
 import Animate from "@components/Animate";
@@ -26,18 +26,18 @@ export default IndexPage;
 
 export const Head = () => <title>Home</title>;
 
-export const query = graphql`
-  query allImages {
-    allImageSharp {
-      nodes {
-        gatsbyImageData
-        parent {
-          ... on File {
-            id
-            name
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query allImages {
+//     allImageSharp {
+//       nodes {
+//         gatsbyImageData
+//         parent {
+//           ... on File {
+//             id
+//             name
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

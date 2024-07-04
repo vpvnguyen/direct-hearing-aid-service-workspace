@@ -17,7 +17,7 @@ const MobileNavbar = () => {
     }
   };
 
-  const navbarHeight = "60px";
+  const navbarHeight = "70px";
 
   return (
     <>

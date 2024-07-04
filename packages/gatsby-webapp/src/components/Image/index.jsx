@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const Image = ({ fileName, alt, loading, ...rest }) => {
   const { allImageSharp } = useStaticQuery(graphql`
-    {
+    query allImages {
       allImageSharp {
         nodes {
           gatsbyImageData
@@ -18,9 +18,9 @@ const Image = ({ fileName, alt, loading, ...rest }) => {
     }
   `);
 
-  const image = allImageSharp.nodes.find(
-    (node) => node.parent.name === fileName
-  ).gatsbyImageData;
+  const image = allImageSharp?.nodes?.find(
+    (node) => node?.parent?.name === fileName
+  )?.gatsbyImageData;
 
   if (!image) return null;
 
