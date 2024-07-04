@@ -1107,7 +1107,7 @@
   resolved "https://registry.yarnpkg.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.20.13", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.20.13", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.24.7"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.7.tgz#f4f0d5530e8dbdf59b3451b9b3e594b6ba082e12"
   integrity sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==
@@ -5569,6 +5569,13 @@ fraction.js@^4.3.7:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
+framer-motion@^11.2.12:
+  version "11.2.12"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.2.12.tgz#ca5c49f8a1c70163cbadabcbd318acdcfea569fb"
+  integrity sha512-lCjkV4nA9rWOy2bhR4RZzkp2xpB++kFmUZ6D44V9VQaxk+JDmbDd5lq+u58DjJIIllE8AZEXp9OG/TyDN4FB/w==
+  dependencies:
+    tslib "^2.4.0"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -5765,6 +5772,13 @@ gatsby-parcel-config@1.13.1:
     "@parcel/runtime-js" "2.8.3"
     "@parcel/transformer-js" "2.8.3"
     "@parcel/transformer-json" "2.8.3"
+
+gatsby-plugin-alias-imports@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-alias-imports/-/gatsby-plugin-alias-imports-1.0.5.tgz#44c0856d77acb74b58b89ec725dadd8f5d5b327d"
+  integrity sha512-q58JrSjuVNh4NApamqElR0zqwm55FOb9vFAVb2i2ftPRu0uYzWJkbOz2IN3vSw7a+5PmGzX7VL8XDFXlNHrMNA==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
 
 gatsby-plugin-breakpoints@^1.3.11:
   version "1.3.11"

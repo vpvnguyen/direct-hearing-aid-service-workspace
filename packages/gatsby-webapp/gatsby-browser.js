@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import { BreakpointProvider } from "gatsby-plugin-breakpoints";
-import Layout from "./src/components/Layout";
+import Layout from "./src/layouts"
 import { theme } from "./src/styles/theme";
 
 export const wrapPageElement = ({ element, props }) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import "../../../styles/reset.joshwcomeau.css";
+import "@styles/reset.joshwcomeau.css";
 
 const DesktopLayout = ({ children }) => {
   return (
@@ -68,7 +68,7 @@ const DesktopLayout = ({ children }) => {
           })}
         >
           <StaticImage
-            src='../../../images/direct-hearing-aid-services-logo.jpeg'
+            src='../../images/direct-hearing-aid-services-logo.jpeg'
             alt="logo"
             placeholder="blurred"
             layout="fixed"

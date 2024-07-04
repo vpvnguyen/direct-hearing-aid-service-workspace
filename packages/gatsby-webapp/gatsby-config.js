@@ -1,3 +1,5 @@
+const path = require("path");
+console.log(`DEBUG`, path.resolve(__dirname, "src/layouts"))
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -5,8 +7,11 @@ module.exports = {
   pathPrefix: "/direct-hearing-aid-service-workspace",
   siteMetadata: {
     title: `Direct Hearing Aid Services`,
-    siteUrl: 'https://vincentnguyen.dev/'
+    siteUrl: "https://vincentnguyen.dev/",
   },
+  // flags: {
+  //   DEV_SSR: true
+  // },
   plugins: [
     "gatsby-plugin-emotion",
     // "gatsby-plugin-google-gtag",
@@ -46,6 +51,21 @@ module.exports = {
           md: "(max-width: 1024px)",
           l: "(max-width: 1536px)",
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          // "@components": "src/components",
+          "@components": path.resolve(__dirname, "src/components"),
+          // "@images": path.resolve(__dirname, "src/images"),
+          "@layouts": path.resolve(__dirname, "src/layouts"),
+          "@pages": "src/pages",
+          "@styles": "src/styles",
+        },
+        extensions: ["js", "jsx", "css"],
       },
     },
   ],
