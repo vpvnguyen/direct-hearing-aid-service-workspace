@@ -8,8 +8,16 @@ import { ContentContainer } from "@layouts";
 import { ContentCard } from "@components/Card";
 import Button from "@components/Button";
 import { css } from "@emotion/react";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
+
+// return breakpoints.md ? (
+//   <MobileLayout {...props} />
+// ) : (
+//   <DesktopLayout {...props} />
+// );
 
 const IndexPage = ({ data }) => {
+  const breakpoints = useBreakpoint();
   return (
     <div>
       <Hero fileName="banner-1" alt="banner">
@@ -19,12 +27,15 @@ const IndexPage = ({ data }) => {
         <Animate>
           <h1>Home Page</h1>
         </Animate>
+        <br />
+        <br />
         <div
           id="home-content"
           css={(theme) => ({
-            display: "grid",
-            gridTemplateColumns: '1fr 1fr 1fr min-content',
+            display: `${breakpoints?.md ? "flex" : "grid"}`,
+            gridTemplateColumns: "1fr 1fr 1fr min-content",
             gap: "1rem",
+            minHeight: "25vh",
           })}
         >
           <ContentCard fileName="image-1" alt="image">
@@ -35,9 +46,7 @@ const IndexPage = ({ data }) => {
             <Button beforeText="Tier 1" afterText="Read More"></Button>
           </ContentCard>
           <ContentCard fileName="image-2" alt="image">
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            </p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
             <Button beforeText="Tier 2" afterText="Read More"></Button>
           </ContentCard>
           <ContentCard fileName="image-3" alt="image">
