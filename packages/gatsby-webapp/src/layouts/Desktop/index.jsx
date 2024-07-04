@@ -68,7 +68,7 @@ const DesktopLayout = ({ children }) => {
           })}
         >
           <StaticImage
-            src='../../images/direct-hearing-aid-services-logo.jpeg'
+            src="../../images/direct-hearing-aid-services-logo.jpeg"
             alt="logo"
             placeholder="blurred"
             layout="fixed"
@@ -121,14 +121,14 @@ const DesktopLayout = ({ children }) => {
       <main
         css={(theme) => ({
           minHeight: "100vh",
-          padding: "2rem",
+          // padding: "2rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
         })}
       >
-        <div css={(theme) => ({ maxWidth: "900px" })}>{children}</div>
+        {children}
       </main>
       <footer
         css={(theme) => ({

@@ -1,6 +1,6 @@
 import React from "react";
 import "@styles/reset.joshwcomeau.css";
-import Navbar from "@components/Navbar/Navbar";
+import MobileNavbar from "@layouts/Mobile/MobileNavbar";
 
 const MobileLayout = ({ children }) => {
   return (
@@ -8,18 +8,17 @@ const MobileLayout = ({ children }) => {
       id="mobile-layout"
       css={(theme) => ({ fontFamily: theme.fonts.fontFamily, margin: 0 })}
     >
-      <Navbar />
+      <MobileNavbar />
       <main
         css={(theme) => ({
           minHeight: "100vh",
-          padding: "150px 2rem 2rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
         })}
       >
-        <div css={(theme) => ({ maxWidth: "900px" })}>{children}</div>
+        {children}
       </main>
       <footer
         css={(theme) => ({

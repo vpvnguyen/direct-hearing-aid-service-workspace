@@ -13,7 +13,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
       rel="stylesheet"
     />,
     <html lang="en" />,
-    <body className="my-body-class" />,
+    <body className="body" />,
     <title>Direct Hearing Aid Services</title>,
   ]);
 };

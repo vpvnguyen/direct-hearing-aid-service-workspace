@@ -1,5 +1,5 @@
 const path = require("path");
-console.log(`DEBUG`, path.resolve(__dirname, "src/layouts"))
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -58,9 +58,7 @@ module.exports = {
       options: {
         alias: {
           "@src": "src",
-          // "@components": "src/components",
           "@components": path.resolve(__dirname, "src/components"),
-          // "@images": path.resolve(__dirname, "src/images"),
           "@layouts": path.resolve(__dirname, "src/layouts"),
           "@pages": "src/pages",
           "@styles": "src/styles",
