@@ -63,7 +63,7 @@ module.exports = {
           "@pages": "src/pages",
           "@styles": "src/styles",
         },
-        extensions: ["js", "jsx", "css"],
+        extensions: ["js", "jsx"],
       },
     },
   ],

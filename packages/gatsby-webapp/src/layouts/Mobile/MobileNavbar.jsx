@@ -2,6 +2,9 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { IoClose, IoMenu } from "react-icons/io5";
+import { FcHome } from "@react-icons/all-files/fc/FcHome";
+import { FcSupport } from "@react-icons/all-files/fc/FcSupport";
+import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
 import { StaticImage } from "gatsby-plugin-image";
 
 const MobileNavbar = () => {
@@ -74,9 +77,9 @@ const MobileNavbar = () => {
                 flexDirection: "column",
                 fontSize: "0.75rem",
                 gap: "2px",
-                overflow: 'hidden',
+                overflow: "hidden",
                 maxHeight: `${navbarHeight}`,
-                textWrap: 'nowrap'
+                textWrap: "nowrap",
               })}
             >
               <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -117,12 +120,11 @@ const MobileNavbar = () => {
               position: "fixed",
               top: "0",
               right: `${showMenu ? "0" : "-100%"}`,
-              backgroundColor: "rgb(255 117 88 / 30%)",
+              backgroundColor: "rgb(190 61 34 / 30%)",
               backdropFilter: "blur(16px)",
               WebkitBackdropFilter: "blur(16px)",
               width: "30%",
               height: "100%",
-              // padding: "6rem 0rem 0rem 2rem",
               transition: "right 0.4s",
               display: "flex",
               flexDirection: "column",
@@ -133,21 +135,18 @@ const MobileNavbar = () => {
               id="nav-close"
               onClick={toggleMenu}
               css={(theme) => ({
-                // position: "absolute",
-                // top: "2rem",
-                // right: "2rem",
                 display: "flex",
                 flexDirection: "row-reverse",
                 padding: "1.5rem",
               })}
             >
-              <IoClose />
+              <IoClose size='1.5rem' />
             </div>
             <ul
               css={(theme) => ({
                 display: "flex",
                 flexDirection: "column",
-                alignItems: 'center',
+                alignItems: "center",
                 rowGap: "2.5rem",
                 margin: "0",
                 padding: "0",
@@ -164,10 +163,13 @@ const MobileNavbar = () => {
                   to="/"
                   css={(theme) => ({
                     transition: "color 0.4s",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
                   })}
                   onClick={closeMenuOnMobile}
                 >
-                  Home
+                  <FcHome size="1.5rem" /> <span>Home</span>
                 </Link>
               </li>
               <li
@@ -181,10 +183,13 @@ const MobileNavbar = () => {
                   to="/services"
                   css={(theme) => ({
                     transition: "color 0.4s",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
                   })}
                   onClick={closeMenuOnMobile}
                 >
-                  Services
+                  <FcSupport size="1.5rem" /> <span>Services</span>
                 </Link>
               </li>
               <li
@@ -198,10 +203,14 @@ const MobileNavbar = () => {
                   to="/contact"
                   css={(theme) => ({
                     transition: "color 0.4s",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
                   })}
                   onClick={closeMenuOnMobile}
                 >
-                  Contact
+                  <FcAssistant size="1.5rem" />
+                  <span>Contact</span>
                 </Link>
               </li>
             </ul>
