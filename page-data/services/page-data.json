@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-services-index-js","path":"/services/","result":{"pageContext":{}},"staticQueryHashes":[],"slicesMap":{}}
+{"componentChunkName":"component---src-pages-services-index-js","path":"/services/","result":{"data":{"allMdx":{"nodes":[{"frontmatter":{"slug":"/services/1","title":"Service 1","description":"service 1 description"}},{"frontmatter":{"slug":"/services/2","title":"Service 2","description":"service 2 description"}}]}},"pageContext":{}},"staticQueryHashes":["2572081284","3694921484"],"slicesMap":{}}
