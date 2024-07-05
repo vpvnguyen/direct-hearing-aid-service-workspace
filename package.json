@@ -16,6 +16,6 @@
     "g:build": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run build",
     "g:serve": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run serve",
     "g:clean": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run clean",
-    "g:deploy": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run deploy"
+    "deploy": "yarn workspace @direct-hearing-aid-service-workspace/gatsby-webapp run deploy"
   }
 }
