@@ -67,12 +67,14 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
             padding: "0rem 6rem",
           })}
         >
-          <StaticImage
-            src="../../images/direct-hearing-aid-services-logo.jpeg"
-            alt="logo"
-            placeholder="blurred"
-            layout="fixed"
-          />
+          <Link to="/">
+            <StaticImage
+              src="../../images/direct-hearing-aid-services-logo.jpeg"
+              alt="logo"
+              placeholder="blurred"
+              layout="fixed"
+            />
+          </Link>
           <nav
             css={(theme) => ({
               flex: 1,
