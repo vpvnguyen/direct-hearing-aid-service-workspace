@@ -52,5 +52,5 @@ export const createPages = async ({ graphql, actions, reporter }) => {
 };
 
 export const onPostBuild = (context) => {
-  console.log(`gatsby-node: onPostBuild`, { actions });
+  console.log(`gatsby-node: onPostBuild`);
 };
