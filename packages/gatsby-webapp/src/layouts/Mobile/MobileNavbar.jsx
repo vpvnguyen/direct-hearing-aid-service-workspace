@@ -7,7 +7,7 @@ import { FcSupport } from "@react-icons/all-files/fc/FcSupport";
 import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
 import { StaticImage } from "gatsby-plugin-image";
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ siteMetadata }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -89,7 +89,7 @@ const MobileNavbar = () => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  Mon-Fri 8:00 am-6:00 pm
+                  {siteMetadata?.primaryPhoneNumber}
                 </span>
               </p>
               <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -99,7 +99,7 @@ const MobileNavbar = () => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  +91-213-666-0027
+                  {siteMetadata?.secondaryPhoneNumber}
                 </span>
               </p>
               <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -109,7 +109,7 @@ const MobileNavbar = () => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  info@example.com
+                  {siteMetadata?.email}
                 </span>
               </p>
             </div>
@@ -140,7 +140,7 @@ const MobileNavbar = () => {
                 padding: "1.5rem",
               })}
             >
-              <IoClose size='1.5rem' />
+              <IoClose size="1.5rem" />
             </div>
             <ul
               css={(theme) => ({

@@ -7,14 +7,22 @@ import { useSiteMetadata } from "@components/Seo/useSiteMetadata";
 
 const Layout = (props) => {
   const breakpoints = useBreakpoint();
-  const { buildTime } = useSiteMetadata()
-  console.log(`DEBUG Layout`, { props, buildTime })
+  const { buildTime, siteMetadata } = useSiteMetadata();
+  console.log(`DEBUG Layout`, { props, buildTime });
   return breakpoints.md ? (
-    <MobileLayout {...props} buildTime={buildTime} />
+    <MobileLayout
+      {...props}
+      buildTime={buildTime}
+      siteMetadata={siteMetadata}
+    />
   ) : (
-    <DesktopLayout {...props} buildTime={buildTime} />
+    <DesktopLayout
+      {...props}
+      buildTime={buildTime}
+      siteMetadata={siteMetadata}
+    />
   );
 };
 
 export default Layout;
-export { ContentContainer }
+export { ContentContainer };

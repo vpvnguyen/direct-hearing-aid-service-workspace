@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "@styles/reset.joshwcomeau.css";
 
-const DesktopLayout = ({ children, buildTime = null }) => {
+const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
   return (
     <div
       id="desktop-layout"
@@ -27,25 +27,25 @@ const DesktopLayout = ({ children, buildTime = null }) => {
           })}
         >
           <p css={(theme) => ({ color: theme.colors.indigoLight })}>
-            Open Hours:
+            Call:
             <span
               css={(theme) => ({
                 color: theme.colors.white,
                 paddingLeft: "0.75rem",
               })}
             >
-              Mon-Fri 8:00 am-6:00 pm
+              {siteMetadata?.primaryPhoneNumber}
             </span>
           </p>
           <p css={(theme) => ({ color: theme.colors.indigoLight })}>
-            Phone:
+            Call:
             <span
               css={(theme) => ({
                 color: theme.colors.white,
                 paddingLeft: "0.75rem",
               })}
             >
-              +91-213-666-0027
+              {siteMetadata?.secondaryPhoneNumber}
             </span>
           </p>
           <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -56,7 +56,7 @@ const DesktopLayout = ({ children, buildTime = null }) => {
                 paddingLeft: "0.75rem",
               })}
             >
-              info@example.com
+              {siteMetadata?.email}
             </span>
           </p>
         </div>
