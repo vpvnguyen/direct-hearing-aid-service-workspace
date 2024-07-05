@@ -1,48 +1,58 @@
 import React from 'react'
 
 const lorem = `
-<div id="Inner">
 <h1>Lorem Ipsum</h1>
-<br>
-<h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
-<h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
-<br>
-<div id="Content">
-<div id="bannerL"><!-- Tag ID: lipsumcom_left_siderail -->
-<div align="center" data-freestar-ad="__300x600" id="lipsumcom_left_siderail">
-  <script data-cfasync="false" type="text/javascript">
-    freestar.config.enabled_slots.push({ placementName: "lipsumcom_left_siderail", slotId: "lipsumcom_left_siderail" });
-  </script>
-</div></div>
-<div id="bannerR"><!-- Tag ID: lipsumcom_right_siderail -->
-<div align="center" data-freestar-ad="__300x600" id="lipsumcom_right_siderail">
-  <script data-cfasync="false" type="text/javascript">
-    freestar.config.enabled_slots.push({ placementName: "lipsumcom_right_siderail", slotId: "lipsumcom_right_siderail" });
-  </script>
-</div></div>
-<div class="boxed"><div id="lipsum">
+
+<br />
+
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac pretium metus, sit amet faucibus velit. Fusce laoreet ultrices arcu, et placerat quam viverra tempus. Nulla ut dictum sem, non mattis lorem. Phasellus laoreet id nisl quis porttitor. Integer dolor enim, condimentum ut viverra in, dignissim ut lacus. Curabitur vestibulum faucibus risus, ac porta leo sollicitudin vitae. Pellentesque ac viverra mi. Ut dapibus, tortor quis venenatis condimentum, augue elit sagittis mi, eget volutpat mi est et leo. Aenean volutpat lorem eget convallis ultrices.
+Curae; montes scelerisque vivamus. Per.
 </p>
+
+<br />
+
 <p>
-Phasellus dapibus ipsum et molestie mattis. Nullam id nisi est. Phasellus ut turpis eu sem molestie imperdiet. Praesent consequat ante sed sodales vestibulum. Cras et accumsan massa. Donec non volutpat diam. Integer ultricies turpis eu fringilla maximus. Nulla cursus condimentum eros eu semper. Cras mollis cursus ex, vitae pellentesque ante imperdiet et. Vestibulum imperdiet sollicitudin neque.
+Id pellentesque dictumst mi vivamus turpis justo, nam tincidunt. Tristique donec posuere faucibus et purus felis nulla porttitor ante. Duis turpis amet risus primis sociosqu feugiat. Metus congue laoreet quam risus blandit scelerisque non velit. Duis mus lorem vehicula amet dolor mi sapien venenatis in rutrum? Lorem fusce dictum feugiat magnis nisi placerat egestas. Ad fames leo ac! Turpis consectetur, ipsum iaculis curae; lectus. Nullam dis dignissim per cubilia iaculis mollis dictumst lacus et elit nulla montes! Commodo ullamcorper cubilia mauris vitae lobortis cras taciti nisl imperdiet fames.
 </p>
-<br>
+
+<br />
+
+<ul>
+<li>
+Curae; dui magna penatibus dignissim ullamcorper non nisi quam parturient euismod fermentum sociosqu eget sodales montes habitant iaculis duis senectus urna turpis montes hac parturient egestas etiam est fusce tincidunt.
+</li>
+<li>
+Ut per orci curae; semper lobortis lacinia condimentum pellentesque purus proin diam praesent volutpat adipiscing dolor pulvinar himenaeos senectus enim dapibus non donec aptent consequat posuere amet tortor sollicitudin magnis.
+</li>
+<li>
+Ligula adipiscing ullamcorper nisi orci risus sodales nec imperdiet elementum rutrum mollis nibh felis lectus dui ultrices parturient eros ridiculus et feugiat faucibus taciti cras ornare ullamcorper mus nisl accumsan?
+</li>
+<li>
+Duis convallis facilisi rhoncus est porta pellentesque sociis viverra egestas taciti mattis gravida litora feugiat magna class integer fames; netus magna eu quisque euismod lacinia potenti nullam aptent fames sociis.
+</li>
+<li>
+Arcu fermentum, placerat porta enim litora euismod sapien orci bibendum eu lectus sollicitudin placerat vel taciti torquent consequat curabitur congue curae; neque commodo mattis nibh habitasse per elementum montes ligula.
+</li>
+</ul>
+
+<br />
+
 <p>
-Morbi a nunc non erat consectetur mollis id ac tellus. Aenean volutpat lorem lacus, et malesuada ligula gravida eu. Mauris mattis ante erat, vitae facilisis diam efficitur nec. Nam in nibh sollicitudin est ornare egestas eu id nibh. Vestibulum massa dolor, blandit eu lacinia vel, sagittis ut urna. Nunc nec metus interdum, rhoncus lacus sed, cursus mi. Praesent rhoncus, tortor sit amet ultrices auctor, tellus leo varius diam, ornare commodo elit nulla eu tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet justo sit amet enim rutrum porttitor ut at ipsum. Nullam pharetra cursus vestibulum. Vivamus eget fermentum mi. Fusce et tortor ac risus sagittis malesuada. Duis quis iaculis erat.
+Et natoque platea nullam eu risus varius id facilisis rhoncus volutpat facilisi parturient. At purus molestie magna urna velit mus sem orci lorem. Rutrum duis elit fermentum. Congue nascetur lacinia mauris commodo felis eros viverra magnis cum litora vitae euismod. Nulla aliquet dui netus tempor cubilia massa torquent nullam suscipit ultrices sociis torquent. Mollis urna tortor praesent tristique. Viverra fusce nec lacinia malesuada turpis primis habitant sociis.
 </p>
-<br>
+<br />
 <p>
-Praesent convallis risus in mattis pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam mollis ultricies purus et elementum. Maecenas sed mollis leo. Etiam est est, sodales a tincidunt nec, pretium vel nisl. Fusce congue placerat dignissim. Cras consectetur mauris ac sagittis commodo. Sed cursus quis sem sed laoreet. Etiam mollis faucibus est vel fermentum. Donec mauris ligula, tincidunt vitae mauris at, consequat lacinia nisl. Proin vestibulum, sapien non commodo fringilla, lacus ante maximus urna, vitae elementum est tellus in lorem.
+Hendrerit nunc cum a. Pulvinar massa neque magna consequat fermentum nec? Morbi rhoncus etiam ridiculus laoreet dictum facilisis, sodales netus eleifend. Conubia a cras lorem orci iaculis tincidunt odio proin feugiat sed? Turpis egestas tincidunt curabitur curae;. Luctus tempus hendrerit at aenean viverra per ipsum nam aptent sit in. Suspendisse cras interdum primis aenean sapien vehicula enim? Ultrices, id fames convallis tempor.
 </p>
-<br>
+<br />
 <p>
-Sed ligula dui, pretium consectetur purus sollicitudin, varius sollicitudin ex. Donec efficitur felis eget vehicula euismod. Nunc eget tortor arcu. Quisque vel sodales orci. Sed vitae erat et lorem tincidunt accumsan. Duis volutpat tortor sapien, ut tempor diam consectetur non. In efficitur eros in ex consectetur imperdiet. Maecenas eget porta mi. Pellentesque molestie faucibus nulla ac condimentum. Nullam consequat non est at dictum. Nullam mattis finibus efficitur. Etiam pretium mauris vitae arcu dictum, quis venenatis nisl varius. Nullam malesuada leo purus, nec porttitor felis tincidunt non. Vestibulum sit amet eleifend nibh, ut aliquet orci.
-</p></div>
-<div id="generated">Generated 5 paragraphs, 432 words, 2932 bytes of <a href="https://www.lipsum.com/" title="Lorem Ipsum">Lorem Ipsum</a></div>
-</div>
-</div>
-</div>
+Tristique suspendisse euismod bibendum felis nisl habitasse. Metus mollis curae; penatibus? Natoque congue justo est. Aenean pharetra lorem phasellus habitant enim pharetra vitae placerat pharetra class! Sollicitudin neque justo sapien platea aliquet. Id sollicitudin cursus etiam egestas purus dignissim ullamcorper magna fusce. Tincidunt netus feugiat ipsum parturient. Nec tempor porta curae; id magna id viverra dapibus! Enim habitant est ornare eleifend augue id dignissim potenti euismod aptent cubilia dolor. Aliquam cursus lorem ac eget ultrices scelerisque arcu et duis taciti. Mattis sociis ultrices massa turpis erat euismod.
+</p>
+<br />
+<p>
+Himenaeos bibendum fames vehicula tincidunt fringilla platea felis platea! Urna eros aptent tempor platea est aenean nostra dapibus non interdum iaculis convallis. Purus libero metus suspendisse etiam lacinia vitae tincidunt. Sollicitudin taciti cubilia dis mus tellus. Felis augue nec vel curae; himenaeos mattis nibh consequat class dapibus venenatis urna. Sagittis, vestibulum aliquet auctor ultrices nec cubilia imperdiet fermentum aptent.
+</p>
+
 `;
 
 

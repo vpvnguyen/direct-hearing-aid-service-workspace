@@ -31,10 +31,7 @@ const Button = styled.button`
       outline: none;
       border: none;
       transition: .3s;
-      background-color: ${(props) => {
-        console.log(`DEBUG`, props?.theme?.colors?.indigo);
-        return props?.theme?.colors?.indigo;
-      }};
+      background-color: ${(props) => props?.theme?.colors?.indigo};
       &:before {
         content: '';
       }

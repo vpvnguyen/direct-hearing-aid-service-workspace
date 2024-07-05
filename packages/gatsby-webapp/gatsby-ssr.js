@@ -29,6 +29,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
 };
 
 export const wrapPageElement = ({ element, props }) => {
+  console.log(`gatsby-ssr: wrapPageElement`, { props })
   return <Layout {...props}>{element}</Layout>;
 };
 

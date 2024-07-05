@@ -30,4 +30,10 @@ export const theme = {
   fonts: {
     fontFamily: `"Poppins", sans-serif`,
   },
+  breakpoints: {
+    xs: "320px",
+    sm: "720px",
+    md: "1024px",
+    l: "1536px",
+  },
 };

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { Link as GatsbyLink } from "gatsby";
 
-const Link = styled.a`
+const Link = styled(GatsbyLink)`
     transition: .5s ease;
     position: relative;
     display: inline-flex;

@@ -2,7 +2,7 @@ import React from "react";
 import "@styles/reset.joshwcomeau.css";
 import MobileNavbar from "@layouts/Mobile/MobileNavbar";
 
-const MobileLayout = ({ children }) => {
+const MobileLayout = ({ children, buildTime = null }) => {
   return (
     <div
       id="mobile-layout"
@@ -32,6 +32,7 @@ const MobileLayout = ({ children }) => {
         })}
       >
         <div css={(theme) => ({ maxWidth: "900px" })}>FOOTER</div>
+        <small>Build: {buildTime}</small>
       </footer>
     </div>
   );

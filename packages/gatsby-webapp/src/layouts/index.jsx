@@ -3,13 +3,16 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import DesktopLayout from "./Desktop";
 import MobileLayout from "./Mobile";
 import ContentContainer from "./Content";
+import { useSiteMetadata } from "@components/Seo/useSiteMetadata";
 
 const Layout = (props) => {
   const breakpoints = useBreakpoint();
+  const { buildTime } = useSiteMetadata()
+  console.log(`DEBUG Layout`, { props, buildTime })
   return breakpoints.md ? (
-    <MobileLayout {...props} />
+    <MobileLayout {...props} buildTime={buildTime} />
   ) : (
-    <DesktopLayout {...props} />
+    <DesktopLayout {...props} buildTime={buildTime} />
   );
 };
 

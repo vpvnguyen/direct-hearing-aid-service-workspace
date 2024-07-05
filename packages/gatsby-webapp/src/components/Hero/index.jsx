@@ -11,6 +11,8 @@ const Hero = ({ children, fileName, alt }) => {
           gridArea: "1/1",
           // You can set a maximum height for the image, if you wish.
           // maxHeight: 600,
+          filter: 'brightness(50%)'
+
         }}
         layout="fullWidth"
         // You can optionally force an aspect ratio for the generated image
@@ -24,6 +26,7 @@ const Hero = ({ children, fileName, alt }) => {
           // This centers the other elements inside the hero component
           placeItems: "center",
           display: "grid",
+          color: 'white'
         }}
       >
         {/* Any content here will be centered in the component */}

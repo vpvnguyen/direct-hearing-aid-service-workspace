@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "@styles/reset.joshwcomeau.css";
 
-const DesktopLayout = ({ children }) => {
+const DesktopLayout = ({ children, buildTime = null }) => {
   return (
     <div
       id="desktop-layout"
@@ -142,6 +142,7 @@ const DesktopLayout = ({ children }) => {
         })}
       >
         <div css={(theme) => ({ maxWidth: "900px" })}>FOOTER</div>
+        <small>Build: {buildTime}</small>
       </footer>
     </div>
   );

@@ -5,6 +5,7 @@ import Layout from "./src/layouts"
 import { theme } from "./src/styles/theme";
 
 export const wrapPageElement = ({ element, props }) => {
+  console.log(`gatsby-browser: wrapPageElement`, { props })
   return <Layout {...props}>{element}</Layout>;
 };
 
