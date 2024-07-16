@@ -7,10 +7,12 @@ import Lorem from "@components/Lorem";
 import { css } from "@emotion/react";
 import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
 import Metadata from "@components/Metadata";
+import { useSiteMetadata } from '@components/Metadata/useSiteMetadata'
 
 const Services = ({ data }) => {
   console.log(`DEBUG Services`, data);
-  // const contents = data?.allMdx?.nodes?.
+  const { siteMetadata } = useSiteMetadata()
+  const { email, phone } = siteMetadata || {}
   return (
     <>
       <Hero fileName="banner-2" alt="banner">
@@ -120,9 +122,12 @@ const Services = ({ data }) => {
               border: "2px dashed hsla(0,0%,100%,.2)",
             })}
           >
-            <p css={(theme) => ({ color: "white" })}>email</p>
+            <p css={(theme) => ({ color: "white" })}>{email}</p>
             <p css={(theme) => ({ color: theme.colors.accent })}>
-              phone number
+              {phone?.primaryDescription}
+            </p>
+            <p css={(theme) => ({ color: theme.colors.accent })}>
+              {phone?.secondaryDescription}
             </p>
           </div>
         </div>
