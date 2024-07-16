@@ -1,13 +1,12 @@
 import * as React from "react";
-// import { graphql } from "gatsby";
 import Lorem from "../components/Lorem";
 import Animate from "@components/Animate";
 import Hero from "../components/Hero";
 import { ContentContainer } from "@layouts";
 import { ContentCard } from "@components/Card";
 import Button from "@components/Button";
-import { css } from "@emotion/react";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
+import Metadata from "@components/Metadata";
 
 const IndexPage = (props) => {
   console.log(`DEBUG IndexPage`, { props });
@@ -106,20 +105,8 @@ const IndexPage = (props) => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home</title>;
-
-// export const query = graphql`
-//   query allImages {
-//     allImageSharp {
-//       nodes {
-//         gatsbyImageData
-//         parent {
-//           ... on File {
-//             id
-//             name
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const Head = ({ location }) => {
+  return (
+    <Metadata location={location} />
+  )
+};

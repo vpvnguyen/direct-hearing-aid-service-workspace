@@ -3,7 +3,7 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import DesktopLayout from "./Desktop";
 import MobileLayout from "./Mobile";
 import ContentContainer from "./Content";
-import { useSiteMetadata } from "@components/Seo/useSiteMetadata";
+import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
 
 const Layout = (props) => {
   const breakpoints = useBreakpoint();

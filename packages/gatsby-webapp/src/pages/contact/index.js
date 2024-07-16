@@ -1,5 +1,6 @@
 import React from "react";
 import { ContentContainer } from "@layouts";
+import Metadata from "@components/Metadata";
 import Lorem from "../../components/Lorem";
 
 const Contact = () => {
@@ -13,12 +14,13 @@ const Contact = () => {
   );
 };
 
-export const Head = () => {
+export const Head = ({ location }) => {
   return (
     <>
-      <title>Contact Us</title>
+      <Metadata location={location} />
     </>
   );
 };
+
 
 export default Contact;

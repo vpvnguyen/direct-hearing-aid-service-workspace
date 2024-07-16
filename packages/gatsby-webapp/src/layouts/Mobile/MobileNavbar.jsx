@@ -89,7 +89,7 @@ const MobileNavbar = ({ siteMetadata }) => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  {siteMetadata?.primaryPhoneNumber}
+                  {siteMetadata?.phone?.primaryDescription}
                 </span>
               </p>
               <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -99,7 +99,7 @@ const MobileNavbar = ({ siteMetadata }) => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  {siteMetadata?.secondaryPhoneNumber}
+                  {siteMetadata?.phone?.secondaryDescription}
                 </span>
               </p>
               <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -120,7 +120,8 @@ const MobileNavbar = ({ siteMetadata }) => {
               position: "fixed",
               top: "0",
               right: `${showMenu ? "0" : "-100%"}`,
-              backgroundColor: "rgb(190 61 34 / 30%)",
+              // backgroundColor: "rgb(190 61 34 / 30%)",
+              backgroundColor: "#571d82de",
               backdropFilter: "blur(16px)",
               WebkitBackdropFilter: "blur(16px)",
               width: "30%",
@@ -138,6 +139,7 @@ const MobileNavbar = ({ siteMetadata }) => {
                 display: "flex",
                 flexDirection: "row-reverse",
                 padding: "1.5rem",
+                color: theme.colors.white
               })}
             >
               <IoClose size="1.5rem" />
@@ -169,7 +171,10 @@ const MobileNavbar = ({ siteMetadata }) => {
                   })}
                   onClick={closeMenuOnMobile}
                 >
-                  <FcHome size="1.5rem" /> <span>Home</span>
+                  <FcHome size="1.5rem" />{" "}
+                  <span css={(theme) => ({ color: theme.colors.white })}>
+                    Home
+                  </span>
                 </Link>
               </li>
               <li
@@ -189,7 +194,10 @@ const MobileNavbar = ({ siteMetadata }) => {
                   })}
                   onClick={closeMenuOnMobile}
                 >
-                  <FcSupport size="1.5rem" /> <span>Services</span>
+                  <FcSupport size="1.5rem" />{" "}
+                  <span css={(theme) => ({ color: theme.colors.white })}>
+                    Services
+                  </span>
                 </Link>
               </li>
               <li
@@ -210,7 +218,9 @@ const MobileNavbar = ({ siteMetadata }) => {
                   onClick={closeMenuOnMobile}
                 >
                   <FcAssistant size="1.5rem" />
-                  <span>Contact</span>
+                  <span css={(theme) => ({ color: theme.colors.white })}>
+                    Contact
+                  </span>
                 </Link>
               </li>
             </ul>

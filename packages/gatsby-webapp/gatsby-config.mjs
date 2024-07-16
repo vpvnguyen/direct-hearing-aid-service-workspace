@@ -13,13 +13,19 @@ export default {
   pathPrefix: "/direct-hearing-aid-service-workspace",
   siteMetadata: {
     title: `Direct Hearing Aid Services`,
-    description: 'Direct Hearing Aid Repair Garden Grove is a hearing aid repair and hearing aid services company that provides hearing aid repair service in Garden Grove.',
-    keywords: 'hearing service, hearing aid, hearing aid repair, hearing aid service, hearing aid repair service, hearing aid repair garden grove',
+    description:
+      "Direct Hearing Aid Repair Garden Grove is a hearing aid repair and hearing aid services company that provides hearing aid repair service in Garden Grove.",
+    keywords:
+      "hearing service, hearing aid, hearing aid repair, hearing aid service, hearing aid repair service, hearing aid repair garden grove",
     siteUrl: "https://vincentnguyen.dev/direct-hearing-aid-service-workspace/",
-    primaryPhoneNumber: "1-888-580-HEAR (4327)",
-    secondaryPhoneNumber: "1-714-534-EARS (3277)",
     email: "andyle.dhas@gmail.com",
-    businessHours: 'Mon-Fri 10:00am - 4:00pm Pacific',
+    businessHours: "Mon-Fri 10:00am - 4:00pm Pacific",
+    phone: {
+      primary: "1-888-580-4327",
+      primaryDescription: "1-888-580-HEAR (4327)",
+      secondary: "1-714-534-3277",
+      secondaryDescription: "1-714-534-EARS (3277)",
+    },
     address: {
       full: "12312 Euclid St. Garden Grove, CA 92840",
       line1: "12312 Euclid St.",
@@ -94,6 +100,14 @@ export default {
       __key: "pages",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "utils",
+        path: `${__dirname}/src/utils/`,
+      },
+      __key: "utils",
+    },
+    {
       resolve: "gatsby-plugin-breakpoints",
       options: {
         queries: {
@@ -113,6 +127,7 @@ export default {
           "@layouts": `${__dirname}/src/layouts`,
           "@pages": `${__dirname}/src/pages`,
           "@styles": `${__dirname}/src/styles`,
+          "@utils": `${__dirname}/src/utils`,
         },
         extensions: ["js", "jsx"],
       },

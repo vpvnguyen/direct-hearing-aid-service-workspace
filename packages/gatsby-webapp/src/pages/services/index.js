@@ -3,9 +3,10 @@ import { ContentContainer } from "@layouts";
 import { graphql } from "gatsby";
 import Hero from "@components/Hero";
 import Link from "@components/Link";
-import Lorem from "../../components/Lorem";
+import Lorem from "@components/Lorem";
 import { css } from "@emotion/react";
 import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
+import Metadata from "@components/Metadata";
 
 const Services = ({ data }) => {
   console.log(`DEBUG Services`, data);
@@ -63,7 +64,7 @@ const Services = ({ data }) => {
             </div>
           ))}
         </div>
-        <ul type="disc" css={theme => ({ paddingTop: '3rem' })}>
+        <ul type="disc" css={(theme) => ({ paddingTop: "3rem" })}>
           <li>24-48 hour turnaround on most repairs</li>
           <li>
             Factory trained &amp; certified technicians with 20+ years of
@@ -130,7 +131,14 @@ const Services = ({ data }) => {
   );
 };
 
-export const Head = () => <title>Services</title>;
+export const Head = ({ location }) => {  
+  console.log(`DEBUG head context`, location)
+  return (
+    <>
+      <Metadata location={location} />
+    </>
+  );
+};
 
 export const query = graphql`
   query servicesPage {

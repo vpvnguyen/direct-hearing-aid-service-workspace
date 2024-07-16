@@ -9,13 +9,11 @@ export const useSiteMetadata = () => {
         port
         buildTime
         siteMetadata {
+          siteUrl
           title
           description
           keywords
-          siteUrl
           email
-          primaryPhoneNumber
-          secondaryPhoneNumber
           businessHours
           address {
             city
@@ -25,6 +23,12 @@ export const useSiteMetadata = () => {
             state
             street
             zip
+          }
+          phone {
+            primary
+            primaryDescription
+            secondary
+            secondaryDescription
           }
         }
       }

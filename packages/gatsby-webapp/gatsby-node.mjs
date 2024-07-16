@@ -32,6 +32,7 @@ const createPagesMdx = async ({ graphql, actions, reporter }) => {
 
     // you'll call `createPage` for each result
     posts.forEach((node) => {
+      console.log(`gatsby-node: createPagesMdx`, { path })
       createPage({
         // As mentioned above you could also query something else like frontmatter.title above and use a helper function
         // like slugify to create a slug

@@ -34,7 +34,7 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
                 paddingLeft: "0.75rem",
               })}
             >
-              {siteMetadata?.primaryPhoneNumber}
+              {siteMetadata?.phone?.primaryDescription}
             </span>
           </p>
           <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -45,7 +45,7 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
                 paddingLeft: "0.75rem",
               })}
             >
-              {siteMetadata?.secondaryPhoneNumber}
+              {siteMetadata?.phone?.secondaryDescription}
             </span>
           </p>
           <p css={(theme) => ({ color: theme.colors.indigoLight })}>
