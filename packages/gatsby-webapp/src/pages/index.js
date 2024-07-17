@@ -14,7 +14,7 @@ const IndexPage = (props) => {
   const breakpoints = useBreakpoint();
   return (
     <div>
-      <Hero fileName="banner-1" alt="banner" styles={{ height: '75vh' }}>
+      <Hero fileName="banner-1" alt="banner" styles={{ height: '60vh' }}>
         <div
           css={(theme) => ({
             display: "flex",
