@@ -2,7 +2,6 @@
 
 export const theme = {
   colors: {
-    accent: "#ff7558",
     blue: "#0d6efd",
     indigo: "#2c2a49",
     indigoLight: "#a5a4b3",
@@ -17,6 +16,9 @@ export const theme = {
     white: "#fff",
     gray: "#6c757d",
     grayDark: "#343a40",
+    //
+    // accent: "#ff7558",
+    accent: "#d5573c",
     primary: "#0d6efd",
     secondary: "#6c757d",
     success: "#198754",
@@ -25,6 +27,9 @@ export const theme = {
     danger: "#dc3545",
     light: "#f8f9fa",
     dark: "#212529",
+    //
+    yelpRed: '#f40e14',
+    // 
     gradient: "linear-gradient(180deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0))",
   },
   fonts: {

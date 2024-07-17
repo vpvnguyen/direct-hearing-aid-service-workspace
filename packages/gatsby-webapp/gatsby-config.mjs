@@ -4,10 +4,8 @@ import remarkGfm from "remark-gfm";
 import remarkExternalLinks from "remark-external-links";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-// import { createRequire } from "module";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-// const require = createRequire(import.meta.url);
 
 export default {
   pathPrefix: "/direct-hearing-aid-service-workspace",
@@ -18,6 +16,8 @@ export default {
     keywords:
       "hearing service, hearing aid, hearing aid repair, hearing aid service, hearing aid repair service, hearing aid repair garden grove",
     siteUrl: "https://vincentnguyen.dev/direct-hearing-aid-service-workspace/",
+    yelpUrl: "https://www.yelp.com/biz/direct-hearing-aid-services-garden-grove",
+    yelpBizId: "3WU_Gnram_RwO3V334eDdQ",
     email: "andyle.dhas@gmail.com",
     businessHours: "Mon-Fri 10:00am - 4:00pm Pacific",
     phone: {

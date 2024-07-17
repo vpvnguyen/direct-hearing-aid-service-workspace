@@ -1,7 +1,7 @@
 import * as React from "react";
 import Image from "@components/Image";
 
-const Hero = ({ children, fileName, alt }) => {
+const Hero = ({ children, fileName, alt, styles = {} }) => {
   return (
     <div style={{ display: "grid" }}>
       <Image
@@ -11,12 +11,12 @@ const Hero = ({ children, fileName, alt }) => {
           gridArea: "1/1",
           // You can set a maximum height for the image, if you wish.
           // maxHeight: 600,
-          filter: 'brightness(50%)'
-
+          filter: 'brightness(50%)',
+          ...styles
         }}
         layout="fullWidth"
         // You can optionally force an aspect ratio for the generated image
-        aspectRatio={3 / 1}
+        aspectratio={3 / 1}
       />
       <div
         style={{

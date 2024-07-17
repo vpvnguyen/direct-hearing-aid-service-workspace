@@ -7,6 +7,7 @@ import { ContentCard } from "@components/Card";
 import Button from "@components/Button";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import Metadata from "@components/Metadata";
+import YelpEmbed from "@components/YelpEmbed";
 
 const IndexPage = (props) => {
   console.log(`DEBUG IndexPage`, { props });
@@ -28,7 +29,7 @@ const IndexPage = (props) => {
               css={(theme) => ({
                 color: "white",
                 fontSize: "3rem",
-                letterSpacing: "0.5rem",
+                letterSpacing: "0.25rem",
               })}
             >
               Welcome
@@ -37,7 +38,9 @@ const IndexPage = (props) => {
 
           <Animate transition={{ duration: 1 }}>
             <ul>
-              <li>20+ years of experience in hearing aid services</li>
+              <li>
+                We have over 20 years of experience in hearing aid services
+              </li>
               <li>Factory trained & certified technicians</li>
               <li>Quality and timely repairs</li>
             </ul>
@@ -45,7 +48,7 @@ const IndexPage = (props) => {
         </div>
       </Hero>
       <ContentContainer>
-        <Animate>
+        {/* <Animate>
           <h1>Home Page</h1>
         </Animate>
         <br />
@@ -77,7 +80,10 @@ const IndexPage = (props) => {
             </p>
             <Button beforeText="Service 3" afterText="Read More"></Button>
           </ContentCard>
-        </div>
+        </div> */}
+        <Animate>
+          <h1>What To Know</h1>
+        </Animate>
         <ul css={(theme) => ({ paddingTop: "1rem" })}>
           <li>
             Most Hearing Aids can be repaired regardless of age to save you
@@ -94,10 +100,27 @@ const IndexPage = (props) => {
           </li>
           <li>
             Extended "Worry-Free" Warranty on our hearing aid repair service
-            available for an additional six months - $129.99
+            available for an additional six months - <b>$129.99</b>
           </li>
         </ul>
-        <Lorem />
+      </ContentContainer>
+      <ContentContainer>
+        <Animate>
+          <h1 css={(theme) => ({ paddingBottom: "2rem" })}>
+            What Our Customers Think
+          </h1>
+        </Animate>
+        <div
+          css={(theme) => ({
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "2rem",
+          })}
+        >
+          <YelpEmbed />
+        </div>
       </ContentContainer>
     </div>
   );
@@ -106,7 +129,5 @@ const IndexPage = (props) => {
 export default IndexPage;
 
 export const Head = ({ location }) => {
-  return (
-    <Metadata location={location} />
-  )
+  return <Metadata location={location} />;
 };

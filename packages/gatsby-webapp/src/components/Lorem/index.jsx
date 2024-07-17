@@ -161,21 +161,20 @@ const Page2 = () => (
         of your hearing aid at the most reasonable price.
       </b>
     </p>
-    <p>
-      Independent hearing aid labs:
-      <ul>
-        <li>
-          Have no ulterior motives in representing what can or cannot be
-          repaired on an existing hearing aid.
-        </li>
-        <li>
-          Guarantee the electronic performance of the hearing aids they repair.
-        </li>
-        <li>
-          Want the hearing aid to perform perfectly once it has been repaired.
-        </li>
-      </ul>
-    </p>
+    <p>Independent hearing aid labs:</p>
+    <ul>
+      <li>
+        Have no ulterior motives in representing what can or cannot be repaired
+        on an existing hearing aid.
+      </li>
+      <li>
+        Guarantee the electronic performance of the hearing aids they repair.
+      </li>
+      <li>
+        Want the hearing aid to perform perfectly once it has been repaired.
+      </li>
+    </ul>
+
     <p>
       As a consumer, it is important for you to know the following about the
       technicians who will be repairing your hearing aid:

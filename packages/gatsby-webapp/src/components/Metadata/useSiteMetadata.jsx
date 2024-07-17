@@ -10,6 +10,7 @@ export const useSiteMetadata = () => {
         buildTime
         siteMetadata {
           siteUrl
+          yelpUrl
           title
           description
           keywords

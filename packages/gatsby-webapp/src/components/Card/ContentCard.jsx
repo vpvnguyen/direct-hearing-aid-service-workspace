@@ -37,7 +37,7 @@ const ContentCard = ({ children, fileName, alt }) => {
         }
         layout="fullWidth"
         // You can optionally force an aspect ratio for the generated image
-        aspectRatio={3 / 1}
+        aspectratio={3 / 1}
       />
 
       {children}

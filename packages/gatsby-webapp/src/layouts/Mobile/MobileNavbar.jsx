@@ -6,6 +6,7 @@ import { FcHome } from "@react-icons/all-files/fc/FcHome";
 import { FcSupport } from "@react-icons/all-files/fc/FcSupport";
 import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
 import { StaticImage } from "gatsby-plugin-image";
+import { css } from "@emotion/react";
 
 const MobileNavbar = ({ siteMetadata }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -46,6 +47,8 @@ const MobileNavbar = ({ siteMetadata }) => {
             position: "relative",
             height: `${navbarHeight}`,
             margin: "0rem 1rem",
+            fontSize: '1.25rem',
+            fontWeight: 600
           })}
         >
           <div
@@ -124,7 +127,7 @@ const MobileNavbar = ({ siteMetadata }) => {
               backgroundColor: "#571d82de",
               backdropFilter: "blur(16px)",
               WebkitBackdropFilter: "blur(16px)",
-              width: "30%",
+              width: "50%",
               height: "100%",
               transition: "right 0.4s",
               display: "flex",
@@ -139,7 +142,8 @@ const MobileNavbar = ({ siteMetadata }) => {
                 display: "flex",
                 flexDirection: "row-reverse",
                 padding: "1.5rem",
-                color: theme.colors.white
+                color: theme.colors.white,
+                cursor: 'pointer'
               })}
             >
               <IoClose size="1.5rem" />
@@ -150,7 +154,7 @@ const MobileNavbar = ({ siteMetadata }) => {
                 flexDirection: "column",
                 alignItems: "center",
                 rowGap: "2.5rem",
-                margin: "0",
+                margin: "0px 2.5rem 0px 0px",
                 padding: "0",
               })}
             >
@@ -229,11 +233,19 @@ const MobileNavbar = ({ siteMetadata }) => {
           <div
             id="nav-toggle"
             onClick={toggleMenu}
-            css={(theme) => ({
+            css={(theme) => css`
+              font-size: 1.5rem;
+              cursor: pointer;
+              color: ${theme.colors.indigo};
+              &:hover {
+                color: ${theme.colors.accent};
+              }
+              `}
+          >
+            {/* ({
               fontSize: "1.5rem",
               cursor: "pointer",
-            })}
-          >
+            }) */}
             <IoMenu />
           </div>
         </nav>

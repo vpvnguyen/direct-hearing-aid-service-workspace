@@ -1,8 +1,9 @@
 import React from "react";
 import "@styles/reset.joshwcomeau.css";
 import MobileNavbar from "@layouts/Mobile/MobileNavbar";
+import Footer from '@layouts/Footer'
 
-const MobileLayout = ({ children, siteMetadata, buildTime = null }) => {
+const MobileLayout = ({ children, siteMetadata }) => {
   return (
     <div
       id="mobile-layout"
@@ -20,7 +21,8 @@ const MobileLayout = ({ children, siteMetadata, buildTime = null }) => {
       >
         {children}
       </main>
-      <footer
+      <Footer />
+      {/* <footer
         css={(theme) => ({
           minHeight: "250px",
           padding: "1rem",
@@ -32,8 +34,7 @@ const MobileLayout = ({ children, siteMetadata, buildTime = null }) => {
         })}
       >
         <div css={(theme) => ({ maxWidth: "900px" })}>FOOTER</div>
-        <small>Build: {buildTime}</small>
-      </footer>
+      </footer> */}
     </div>
   );
 };

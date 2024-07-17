@@ -5,7 +5,7 @@ import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
 import { capitalizeFirstLetter } from "@utils/capitalizeFirstLetter";
 
 const Metadata = ({ title, location, children }) => {
-  const { siteMetadata } = useSiteMetadata();
+  const { siteMetadata, buildTime } = useSiteMetadata();
 
   const getTitleByPathname = ({ location }) => {
     const { pathname = "/" } = location || {};
@@ -20,8 +20,9 @@ const Metadata = ({ title, location, children }) => {
     <>
       <GoogleFonts />
       <SEO />
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta buildversion={buildTime} />
       <html lang="en" />
       <body className="body" />
       <title>

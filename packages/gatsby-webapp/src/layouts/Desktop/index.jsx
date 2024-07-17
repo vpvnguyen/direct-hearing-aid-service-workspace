@@ -2,8 +2,13 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "@styles/reset.joshwcomeau.css";
+import Footer from "@layouts/Footer";
+import { FaYelp } from "@react-icons/all-files/fa/FaYelp";
+import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
+import { css } from "@emotion/react";
 
-const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
+const DesktopLayout = ({ children, siteMetadata = {} }) => {
+  const { yelpUrl } = siteMetadata;
   return (
     <div
       id="desktop-layout"
@@ -23,6 +28,7 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
             color: "white",
             display: "flex",
             justifyContent: "space-around",
+            alignItems: 'center',
             padding: "1rem",
           })}
         >
@@ -59,6 +65,19 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
               {siteMetadata?.email}
             </span>
           </p>
+          <a
+            href={yelpUrl}
+            target="_blank"
+            css={(theme) => css`
+              text-decoration: none;
+              color: ${theme.colors.yelpRed};
+              &:hover {
+                color: white;
+              }
+            `}
+          >
+            <FaYelp size="1.5rem" />
+          </a>
         </div>
         <div
           css={(theme) => ({
@@ -82,6 +101,8 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
               justifyContent: "flex-end",
               alignItems: "center",
               gap: "6rem",
+              fontSize: "1.25rem",
+              fontWeight: 600,
             })}
           >
             <Link
@@ -123,7 +144,6 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
       <main
         css={(theme) => ({
           minHeight: "100vh",
-          // padding: "2rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -132,20 +152,7 @@ const DesktopLayout = ({ children, siteMetadata, buildTime = null }) => {
       >
         {children}
       </main>
-      <footer
-        css={(theme) => ({
-          minHeight: "250px",
-          padding: "1rem",
-          backgroundColor: theme.colors.indigo,
-          color: theme.colors.white,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        })}
-      >
-        <div css={(theme) => ({ maxWidth: "900px" })}>FOOTER</div>
-        <small>Build: {buildTime}</small>
-      </footer>
+      <Footer />
     </div>
   );
 };
