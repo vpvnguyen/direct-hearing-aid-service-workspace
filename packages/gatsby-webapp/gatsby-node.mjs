@@ -12,11 +12,14 @@ const createPagesMdx = async ({ graphql, actions, reporter }) => {
             slug
             title
           }
+          internal {
+            contentFilePath
+          }
         }
       }
     }
   `);
-  
+
   console.log(`gatsby-node: createPagesMdx`, { result });
 
   if (result.errors) {
