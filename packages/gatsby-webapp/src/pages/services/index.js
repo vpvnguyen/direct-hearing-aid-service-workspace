@@ -80,14 +80,13 @@ const Services = ({ data }) => {
           <li>Walk-in cleaning and maintenance check</li>
           <li>Direct shipping</li>
         </ul>
-
       </ContentContainer>
     </>
   );
 };
 
-export const Head = ({ location }) => {  
-  console.log(`DEBUG head context`, location)
+export const Head = ({ location }) => {
+  console.log(`DEBUG head context`, location);
   return (
     <>
       <Metadata location={location} />
@@ -96,9 +95,16 @@ export const Head = ({ location }) => {
 };
 
 export const query = graphql`
-  query servicesPage {
-    allMdx(filter: { frontmatter: { slug: { regex: "/services/" } } }) {
+  query allMdx {
+    allMdx(
+      sort: { frontmatter: { slug: ASC } }
+      filter: { frontmatter: { slug: { regex: "/service/" } } }
+    ) {
+      totalCount
       nodes {
+        id
+        excerpt
+        tableOfContents
         frontmatter {
           slug
           title
