@@ -19,7 +19,7 @@ export default {
     yelpUrl: "https://www.yelp.com/biz/direct-hearing-aid-services-garden-grove",
     yelpBizId: "3WU_Gnram_RwO3V334eDdQ",
     email: "andyle.dhas@gmail.com",
-    businessHours: "Mon-Fri 10:00am - 4:00pm Pacific",
+    businessHours: "Monday-Friday, 10:00am - 4:00pm Pacific",
     phone: {
       primary: "1-888-580-4327",
       primaryDescription: "1-888-580-HEAR (4327)",
