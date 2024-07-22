@@ -44,7 +44,7 @@ const YelpEmbed = () => {
       {/* === */}
 
       <span
-        class="yelp-review"
+        className="yelp-review"
         data-review-id="i0VVqksnEmspoyOVl1CcHw"
         data-hostname="www.yelp.com"
       >
@@ -83,7 +83,7 @@ const YelpEmbed = () => {
       {/* === */}
 
       <span
-        class="yelp-review"
+        className="yelp-review"
         data-review-id="rRAQsB7y_Ne_4tyg4VBmZA"
         data-hostname="www.yelp.com"
       >

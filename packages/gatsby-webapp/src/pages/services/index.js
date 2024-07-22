@@ -81,6 +81,20 @@ const Services = ({ data }) => {
           <li>Direct shipping</li>
         </ul>
       </ContentContainer>
+      <ContentContainer>
+        {/* A hearing aid consists of 2 basic component categories: 
+        - the shell 
+        - electronic devices: 
+        - - transducer: microphones which receive sound waves, 
+        - - speaker: a receiver which processes sound
+
+        Both of these type components are:
+
+        - Very susceptible to contamination by dirt, dust, moisture, chemicals (such as hair spray) and ear wax created within the ear canal.
+        - Contain very delicate membranes which can be damaged by physical shock or environmental factors, including humidity and moisture.
+        - Some hearing aids include switches and other devices such as a Telescopic (for use with a telephone) and */}
+
+      </ContentContainer>
     </>
   );
 };

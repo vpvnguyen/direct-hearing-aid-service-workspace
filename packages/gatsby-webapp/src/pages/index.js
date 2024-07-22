@@ -1,10 +1,9 @@
 import * as React from "react";
-import Lorem from "../components/Lorem";
 import Animate from "@components/Animate";
 import Hero from "../components/Hero";
 import { ContentContainer } from "@layouts";
 import { ContentCard } from "@components/Card";
-import Button from "@components/Button";
+import Link from "@components/Link";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import Metadata from "@components/Metadata";
 import YelpEmbed from "@components/YelpEmbed";
@@ -14,14 +13,14 @@ const IndexPage = (props) => {
   const breakpoints = useBreakpoint();
   return (
     <div>
-      <Hero fileName="banner-1" alt="banner" styles={{ height: '60vh' }}>
+      <Hero fileName="banner-1" alt="banner" styles={{ height: "60vh" }}>
         <div
           css={(theme) => ({
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            gap: "3rem",
+            gap: "2rem",
           })}
         >
           <Animate>
@@ -44,6 +43,9 @@ const IndexPage = (props) => {
               <li>Factory trained & certified technicians</li>
               <li>Quality and timely repairs</li>
             </ul>
+          </Animate>
+          <Animate transition={{ duration: 1.5 }}>
+            <Link to="/contact">Make An Appointment</Link>
           </Animate>
         </div>
       </Hero>

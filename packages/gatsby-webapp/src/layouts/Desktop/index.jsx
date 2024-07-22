@@ -28,7 +28,7 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
             color: "white",
             display: "flex",
             justifyContent: "space-around",
-            alignItems: 'center',
+            alignItems: "center",
             padding: "1rem",
           })}
         >
@@ -146,7 +146,6 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
           alignItems: "center",
         })}
       >

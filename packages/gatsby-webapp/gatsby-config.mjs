@@ -127,6 +127,7 @@ export default {
           "@layouts": `${__dirname}/src/layouts`,
           "@pages": `${__dirname}/src/pages`,
           "@styles": `${__dirname}/src/styles`,
+          "@templates": `${__dirname}/src/templates`,
           "@utils": `${__dirname}/src/utils`,
         },
         extensions: ["js", "jsx"],
