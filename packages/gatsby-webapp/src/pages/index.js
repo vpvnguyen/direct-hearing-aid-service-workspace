@@ -1,21 +1,13 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 import Animate from "@components/Animate";
-import Hero from "../components/Hero";
+import Hero from "@components/Hero";
 import { ContentContainer } from "@layouts";
-import { ContentCard } from "@components/Card";
 import Link from "@components/Link";
-import Button from "@components/Button";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import Metadata from "@components/Metadata";
 import YelpEmbed from "@components/YelpEmbed";
-import { graphql } from "gatsby";
 
-const IndexPage = (props) => {
-  console.log(`DEBUG IndexPage`, { props });
-  const { data } = props || {};
-  console.log(`DEBUG IndexPage`, { data });
-
-  const breakpoints = useBreakpoint();
+const IndexPage = ({ data }) => {
   return (
     <div>
       <Hero fileName="banner-1" alt="banner" styles={{ height: "60vh" }}>

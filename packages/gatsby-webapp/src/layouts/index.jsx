@@ -8,7 +8,6 @@ import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
 const Layout = (props) => {
   const breakpoints = useBreakpoint();
   const { siteMetadata } = useSiteMetadata();
-  console.log(`DEBUG Layout`, { props, siteMetadata });
   return breakpoints.md ? (
     <MobileLayout
       {...props}

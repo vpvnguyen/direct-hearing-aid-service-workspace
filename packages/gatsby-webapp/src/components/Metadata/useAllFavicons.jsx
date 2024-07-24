@@ -18,7 +18,6 @@ export const useAllFavicons = () => {
     }
   `);
 
-  console.log(`DEBUG useAllFavicons`, { allFiles });
 
   //   {
   //     "name": "android-chrome-192x192",

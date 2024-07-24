@@ -2,8 +2,6 @@ import * as React from "react";
 import { ContentContainer } from "@layouts";
 
 const Repair = (props) => {
-  console.log(`DEBUG Repair`, { props });
-
   return (
     <>
       <ContentContainer>

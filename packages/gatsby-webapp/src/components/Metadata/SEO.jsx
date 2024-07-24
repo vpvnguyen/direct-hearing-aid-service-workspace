@@ -1,13 +1,10 @@
 // https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-seo-component/
 import * as React from "react";
 import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
-// import { useAllFavicons } from "@components/Metadata/useAllFavicons";
 
 export const SEO = () => {
   const { siteMetadata } = useSiteMetadata();
-  // const favicons = useAllFavicons();
   const { description, keywords } = siteMetadata || {};
-  console.log(`DEBUG SEO`, { siteMetadata });
 
   return (
     <>
@@ -29,15 +26,6 @@ export const SEO = () => {
       ></meta>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      {/* {favicons?.length &&
-        favicons?.map(({ name, absolutePath, internal }) => (
-          <link
-            key={`${name}-FAVICONZ`}
-            rel="icon"
-            type={internal?.mediaType}
-            href={absolutePath}
-          />
-        ))} */}
     </>
   );
 };

@@ -9,8 +9,8 @@ import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
 
 const Contact = () => {
   const { siteMetadata } = useSiteMetadata();
-  console.log(`DEBUG`, siteMetadata);
   const { address, businessHours, email, phone } = siteMetadata;
+  
   const convertToTelephoneNumber = (phone) => {
     let parsed = phone;
     try {
@@ -21,6 +21,7 @@ const Contact = () => {
     }
     return parsed;
   };
+
   return (
     <>
       <Hero fileName="banner-3" alt="banner" styles={{ width: "100vw" }}>

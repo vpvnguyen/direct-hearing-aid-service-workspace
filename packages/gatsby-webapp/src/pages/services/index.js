@@ -1,6 +1,6 @@
 import React from "react";
-import { ContentContainer } from "@layouts";
 import { graphql, Link as GatsbyLink } from "gatsby";
+import { ContentContainer } from "@layouts";
 import Hero from "@components/Hero";
 import Link from "@components/Link";
 import { css } from "@emotion/react";
@@ -8,7 +8,6 @@ import Metadata from "@components/Metadata";
 import RepairForm from "@components/RepairForm";
 
 const Services = ({ data }) => {
-  console.log(`DEBUG Services`, data);
   return (
     <>
       <Hero fileName="banner-2" alt="banner">
@@ -106,7 +105,6 @@ const Services = ({ data }) => {
 };
 
 export const Head = ({ location }) => {
-  console.log(`DEBUG head context`, location);
   return (
     <>
       <Metadata location={location} />

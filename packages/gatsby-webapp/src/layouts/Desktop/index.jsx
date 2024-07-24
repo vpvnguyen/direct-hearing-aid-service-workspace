@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { css } from "@emotion/react";
+import { FaYelp } from "@react-icons/all-files/fa/FaYelp";
 import "@styles/reset.joshwcomeau.css";
 import Footer from "@layouts/Footer";
-import { FaYelp } from "@react-icons/all-files/fa/FaYelp";
-import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
-import { css } from "@emotion/react";
 
 const DesktopLayout = ({ children, siteMetadata = {} }) => {
   const { yelpUrl } = siteMetadata;

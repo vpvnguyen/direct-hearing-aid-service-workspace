@@ -1,12 +1,21 @@
 import React from "react";
+import { Script } from "gatsby";
 import { ThemeProvider } from "@emotion/react";
 import { BreakpointProvider } from "gatsby-plugin-breakpoints";
-import Layout from "./src/layouts"
+import Layout from "./src/layouts";
 import { theme } from "./src/styles/theme";
 
 export const wrapPageElement = ({ element, props }) => {
-  console.log(`gatsby-browser: wrapPageElement`, { props })
-  return <Layout {...props}>{element}</Layout>;
+  return (
+    <Layout {...props}>
+      {element}
+      <Script
+        src="https://www.yelp.com/embed/widgets.js"
+        strategy="post-hydrate"
+        onLoad={() => console.log(`yelp loaded`)}
+      />
+    </Layout>
+  );
 };
 
 export const wrapRootElement = ({ element }) => {

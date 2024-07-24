@@ -1,36 +1,21 @@
 import React from "react";
+import { Script } from "gatsby";
 import { ThemeProvider } from "@emotion/react";
 import { BreakpointProvider } from "gatsby-plugin-breakpoints";
 import Layout from "./src/layouts";
 import { theme } from "./src/styles/theme";
 
-// export const onRenderBody = ({ setHeadComponents }) => {
-//   // setHeadComponents([
-//   //   <link
-//   //     key="google-fonts-1"
-//   //     rel="preconnect"
-//   //     href="https://fonts.googleapis.com"
-//   //   />,
-//   //   <link
-//   //     key="google-fonts-2"
-//   //     rel="preconnect"
-//   //     href="https://fonts.gstatic.com"
-//   //     crossOrigin={-1}
-//   //   />,
-//   //   <link
-//   //     key="google-fonts-3"
-//   //     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-//   //     rel="stylesheet"
-//   //   />,
-//   //   <html lang="en" />,
-//   //   <body className="body" />,
-//   //   <title>Direct Hearing Aid Services</title>,
-//   // ]);
-// };
-
 export const wrapPageElement = ({ element, props }) => {
-  console.log(`gatsby-ssr: wrapPageElement`, { props })
-  return <Layout {...props}>{element}</Layout>;
+  return (
+    <Layout {...props}>
+      {element}
+      <Script
+        src="https://www.yelp.com/embed/widgets.js"
+        strategy="post-hydrate"
+        onLoad={() => console.log(`yelp loaded`)}
+      />
+    </Layout>
+  );
 };
 
 export const wrapRootElement = ({ element }) => {

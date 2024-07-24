@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleFonts from "@components/Metadata/GoogleFonts";
-import SEO from "@components/Metadata/SEO";
+import Seo from "@components/Metadata/SEO";
 import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
 import { capitalizeFirstLetter } from "@utils/capitalizeFirstLetter";
 
@@ -19,7 +19,7 @@ const Metadata = ({ title, location, children }) => {
   return (
     <>
       <GoogleFonts />
-      <SEO />
+      <Seo />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta buildversion={buildTime} />
