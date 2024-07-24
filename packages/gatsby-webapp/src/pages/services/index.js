@@ -32,13 +32,6 @@ const Services = ({ data }) => {
             padding: "40px",
           })}
         >
-          <h1
-            css={(theme) => ({
-              textAlign: "center",
-            })}
-          >
-            All Services
-          </h1>
           {data?.allMdx?.nodes?.map(({ frontmatter }) => (
             <div key={frontmatter?.slug}>
               <Link
@@ -61,7 +54,10 @@ const Services = ({ data }) => {
             </div>
           ))}
         </div>
-        <ul type="disc" css={(theme) => ({ paddingTop: "3rem" })}>
+      </ContentContainer>
+      <ContentContainer>
+        <h1>What You Can Expect</h1>
+        <ul type="disc" css={(theme) => ({ paddingTop: "1rem" })}>
           <li>24-48 hour turnaround on most repairs</li>
           <li>
             Factory trained &amp; certified technicians with 20+ years of
@@ -81,20 +77,6 @@ const Services = ({ data }) => {
           <li>Direct shipping</li>
         </ul>
       </ContentContainer>
-      <ContentContainer>
-        {/* A hearing aid consists of 2 basic component categories: 
-        - the shell 
-        - electronic devices: 
-        - - transducer: microphones which receive sound waves, 
-        - - speaker: a receiver which processes sound
-
-        Both of these type components are:
-
-        - Very susceptible to contamination by dirt, dust, moisture, chemicals (such as hair spray) and ear wax created within the ear canal.
-        - Contain very delicate membranes which can be damaged by physical shock or environmental factors, including humidity and moisture.
-        - Some hearing aids include switches and other devices such as a Telescopic (for use with a telephone) and */}
-
-      </ContentContainer>
     </>
   );
 };
@@ -109,7 +91,7 @@ export const Head = ({ location }) => {
 };
 
 export const query = graphql`
-  query allMdx {
+  query allServices {
     allMdx(
       sort: { frontmatter: { slug: ASC } }
       filter: { frontmatter: { slug: { regex: "/service/" } } }
@@ -128,4 +110,5 @@ export const query = graphql`
     }
   }
 `;
+
 export default Services;

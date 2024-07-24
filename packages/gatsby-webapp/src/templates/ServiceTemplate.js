@@ -27,20 +27,18 @@ const ServiceTemplate = ({ pageContext }) => {
     breadcrumbs,
   } = pageContext || {};
   return (
-    <div>
-      <ContentContainer>
-        <div
-          css={(theme) => ({
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-          })}
-        >
-          <Breadcrumbs breadcrumbs={breadcrumbs} />
-          <div dangerouslySetInnerHTML={{ __html: data }} />
-        </div>
-      </ContentContainer>
-    </div>
+    <ContentContainer>
+      <div
+        css={(theme) => ({
+          display: "flex",
+          flexDirection: "column",
+          gap: "2rem",
+        })}
+      >
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
+        <div dangerouslySetInnerHTML={{ __html: data }} />
+      </div>
+    </ContentContainer>
   );
 };
 

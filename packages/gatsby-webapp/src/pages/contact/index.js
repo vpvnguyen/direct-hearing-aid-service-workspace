@@ -62,8 +62,14 @@ const Contact = () => {
           })}
         >
           <h1>Our Social</h1>
-          <FacebookEmbed />
-          <YelpEmbed />
+          <div>
+            <h3>Facebook:</h3>
+            <FacebookEmbed />
+          </div>
+          <div>
+            <h3>Yelp Reviews:</h3>
+            <YelpEmbed />
+          </div>
         </div>
       </ContentContainer>
     </>

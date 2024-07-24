@@ -4,12 +4,17 @@ import Hero from "../components/Hero";
 import { ContentContainer } from "@layouts";
 import { ContentCard } from "@components/Card";
 import Link from "@components/Link";
+import Button from "@components/Button";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import Metadata from "@components/Metadata";
 import YelpEmbed from "@components/YelpEmbed";
+import { graphql } from "gatsby";
 
 const IndexPage = (props) => {
   console.log(`DEBUG IndexPage`, { props });
+  const { data } = props || {};
+  console.log(`DEBUG IndexPage`, { data });
+
   const breakpoints = useBreakpoint();
   return (
     <div>
@@ -50,61 +55,59 @@ const IndexPage = (props) => {
         </div>
       </Hero>
       <ContentContainer>
-        {/* <Animate>
-          <h1>Home Page</h1>
-        </Animate>
-        <br />
-        <br />
-        <div
-          id="home-content"
-          css={(theme) => ({
-            display: `${breakpoints?.md ? "flex" : "grid"}`,
-            gridTemplateColumns: "1fr 1fr 1fr min-content",
-            gap: "1rem",
-            minHeight: "25vh",
-          })}
-        >
-          <ContentCard fileName="image-1" alt="image">
-            <p>
-              "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-              consectetur, adipisci velit..."
-            </p>
-            <Button beforeText="Service 1" afterText="Read More"></Button>
-          </ContentCard>
-          <ContentCard fileName="image-2" alt="image">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-            <Button beforeText="Service 2" afterText="Read More"></Button>
-          </ContentCard>
-          <ContentCard fileName="image-3" alt="image">
-            <p>
-              "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-              consectetur, adipisci velit..."
-            </p>
-            <Button beforeText="Service 3" afterText="Read More"></Button>
-          </ContentCard>
-        </div> */}
         <Animate>
           <h1>What To Know</h1>
         </Animate>
-        <ul css={(theme) => ({ paddingTop: "1rem" })}>
-          <li>
-            Most Hearing Aids can be repaired regardless of age to save you
-            money.
-          </li>
-          <li>
-            Offers 48-hour "in-house" turnaround on most hearing aid repair so
-            you can get your Hearing back faster.
-          </li>
-          <li>Provides new faceplates and upgrades on most custom models.</li>
-          <li>
-            Re-casing available on ALL custom models to extend the life of your
-            Hearing Aid.
-          </li>
-          <li>
-            Extended "Worry-Free" Warranty on our hearing aid repair service
-            available for an additional six months - <b>$129.99</b>
-          </li>
-        </ul>
+        <Animate transition={{ duration: 1.5 }}>
+          <ul css={(theme) => ({ paddingTop: "1rem" })}>
+            <li>
+              Most Hearing Aids can be repaired regardless of age to save you
+              money.
+            </li>
+            <li>
+              Offers 48-hour "in-house" turnaround on most hearing aid repair so
+              you can get your Hearing back faster.
+            </li>
+            <li>Provides new faceplates and upgrades on most custom models.</li>
+            <li>
+              Re-casing available on ALL custom models to extend the life of
+              your Hearing Aid.
+            </li>
+            <li>
+              Extended "Worry-Free" Warranty on our hearing aid repair service
+              available for an additional six months - <b>$129.99</b>
+            </li>
+          </ul>
+        </Animate>
+      </ContentContainer>
+      <ContentContainer>
+        <Animate>
+          <h1 css={(theme) => ({ paddingBottom: "2rem" })}>What We Offer</h1>
+        </Animate>
+        <div
+          css={(theme) => ({
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "1rem",
+            flexWrap: "wrap",
+          })}
+        >
+          {data &&
+            data?.allMdx?.nodes?.map(({ frontmatter }, index) => (
+              <Animate key={frontmatter?.slug} transition={{ duration: index / 3 }}>
+                <Link
+                  to={frontmatter?.slug}
+                  css={(theme) => ({
+                    display: "flex",
+                    flexDirection: "column",
+                  })}
+                >
+                  <p>{frontmatter?.title}</p>
+                </Link>
+              </Animate>
+            ))}
+        </div>
       </ContentContainer>
       <ContentContainer>
         <Animate>
@@ -112,17 +115,19 @@ const IndexPage = (props) => {
             What Our Customers Think
           </h1>
         </Animate>
-        <div
-          css={(theme) => ({
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "2rem",
-          })}
-        >
-          <YelpEmbed />
-        </div>
+        <Animate transition={{ duration: 1.5 }}>
+          <div
+            css={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "2rem",
+            })}
+          >
+            <YelpEmbed />
+          </div>
+        </Animate>
       </ContentContainer>
     </div>
   );
@@ -133,3 +138,24 @@ export default IndexPage;
 export const Head = ({ location }) => {
   return <Metadata location={location} />;
 };
+
+export const query = graphql`
+  query allServices {
+    allMdx(
+      sort: { frontmatter: { slug: ASC } }
+      filter: { frontmatter: { slug: { regex: "/service/" } } }
+    ) {
+      totalCount
+      nodes {
+        id
+        excerpt
+        tableOfContents
+        frontmatter {
+          slug
+          title
+          description
+        }
+      }
+    }
+  }
+`;

@@ -143,7 +143,7 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
       </header>
       <main
         css={(theme) => ({
-          minHeight: "100vh",
+          minHeight: "75vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

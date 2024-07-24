@@ -12,7 +12,7 @@ const MobileLayout = ({ children, siteMetadata }) => {
       <MobileNavbar siteMetadata={siteMetadata} />
       <main
         css={(theme) => ({
-          minHeight: "100vh",
+          minHeight: "75vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
