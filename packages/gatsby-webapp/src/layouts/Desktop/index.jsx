@@ -68,6 +68,7 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
           <a
             href={yelpUrl}
             target="_blank"
+            rel="noreferrer"
             css={(theme) => css`
               text-decoration: none;
               color: ${theme.colors.yelpRed};

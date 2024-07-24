@@ -10,7 +10,17 @@ import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
 const Contact = () => {
   const { siteMetadata } = useSiteMetadata();
   console.log(`DEBUG`, siteMetadata);
-  const { address, businessHours } = siteMetadata;
+  const { address, businessHours, email, phone } = siteMetadata;
+  const convertToTelephoneNumber = (phone) => {
+    let parsed = phone;
+    try {
+      const convertedNumber = phone?.split("-").join("");
+      parsed = convertedNumber;
+    } catch (error) {
+      console.error(`Error converting phone number: ${phone}`);
+    }
+    return parsed;
+  };
   return (
     <>
       <Hero fileName="banner-3" alt="banner" styles={{ width: "100vw" }}>
@@ -44,9 +54,24 @@ const Contact = () => {
             <div>
               <p>{address?.line1}</p>
               <p>{address?.line2}</p>
+              <p>{businessHours}</p>
             </div>
             <div>
-              <p>{businessHours}</p>
+              <p>
+                Email: <a href={`mailto:${email}`}>{email}</a>
+              </p>
+              <p>
+                Call:{" "}
+                <a href={`tel:${convertToTelephoneNumber(phone?.primary)}`}>
+                  {phone?.primaryDescription}
+                </a>{" "}
+              </p>
+              <p>
+                Call:{" "}
+                <a href={`tel:${convertToTelephoneNumber(phone?.secondary)}`}>
+                  {phone?.secondaryDescription}
+                </a>{" "}
+              </p>
             </div>
           </div>
           <GoogleMapsEmbed style={{ width: "100%" }} />
@@ -63,11 +88,13 @@ const Contact = () => {
         >
           <h1>Our Social</h1>
           <div>
-            <h3>Facebook:</h3>
+            <h3 css={(theme) => ({ paddingBottom: "0.5rem" })}>Facebook:</h3>
             <FacebookEmbed />
           </div>
           <div>
-            <h3>Yelp Reviews:</h3>
+            <h3 css={(theme) => ({ paddingBottom: "0.5rem" })}>
+              Yelp Reviews:
+            </h3>
             <YelpEmbed />
           </div>
         </div>

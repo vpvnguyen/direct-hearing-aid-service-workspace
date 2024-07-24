@@ -94,6 +94,14 @@ export default {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "static",
+        path: `${__dirname}/static/`,
+      },
+      __key: "static",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "pages",
         path: `${__dirname}/src/pages/`,
       },

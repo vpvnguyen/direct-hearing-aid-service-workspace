@@ -1,10 +1,11 @@
 import React from "react";
 import { ContentContainer } from "@layouts";
-import { graphql } from "gatsby";
+import { graphql, Link as GatsbyLink } from "gatsby";
 import Hero from "@components/Hero";
 import Link from "@components/Link";
 import { css } from "@emotion/react";
 import Metadata from "@components/Metadata";
+import RepairForm from "@components/RepairForm";
 
 const Services = ({ data }) => {
   console.log(`DEBUG Services`, data);
@@ -53,6 +54,29 @@ const Services = ({ data }) => {
               </Link>
             </div>
           ))}
+        </div>
+      </ContentContainer>
+      <ContentContainer>
+        <div>
+          <h2>Ready to get started?</h2>
+          <ul css={(theme) => ({ paddingTop: "1rem" })}>
+            <li>
+              <span css={(theme) => ({ display: "flex", gap: "0.25rem" })}>
+                Download and fill out our repair form: <RepairForm />
+              </span>
+            </li>
+            <li>Postage mail or email us the repair form</li>
+            <li>
+              Lost?{" "}
+              <GatsbyLink
+                to="/contact"
+                css={(theme) => ({ textDecoration: "underline !important" })}
+              >
+                Contact us
+              </GatsbyLink>{" "}
+              and we will help you out!
+            </li>
+          </ul>
         </div>
       </ContentContainer>
       <ContentContainer>
