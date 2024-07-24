@@ -1,14 +1,15 @@
 /* eslint-disable */
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import { css } from "@emotion/react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { FcHome } from "@react-icons/all-files/fc/FcHome";
 import { FcSupport } from "@react-icons/all-files/fc/FcSupport";
 import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
-import { StaticImage } from "gatsby-plugin-image";
-import { css } from "@emotion/react";
 
 const MobileNavbar = ({ siteMetadata }) => {
+  const { yelpUrl } = siteMetadata;
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -47,8 +48,8 @@ const MobileNavbar = ({ siteMetadata }) => {
             position: "relative",
             height: `${navbarHeight}`,
             margin: "0rem 1rem",
-            fontSize: '1.25rem',
-            fontWeight: 600
+            fontSize: "1.25rem",
+            fontWeight: 600,
           })}
         >
           <div
@@ -123,7 +124,6 @@ const MobileNavbar = ({ siteMetadata }) => {
               position: "fixed",
               top: "0",
               right: `${showMenu ? "0" : "-100%"}`,
-              // backgroundColor: "rgb(190 61 34 / 30%)",
               backgroundColor: "#571d82de",
               backdropFilter: "blur(16px)",
               WebkitBackdropFilter: "blur(16px)",
@@ -143,7 +143,7 @@ const MobileNavbar = ({ siteMetadata }) => {
                 flexDirection: "row-reverse",
                 padding: "1.5rem",
                 color: theme.colors.white,
-                cursor: 'pointer'
+                cursor: "pointer",
               })}
             >
               <IoClose size="1.5rem" />
@@ -227,6 +227,34 @@ const MobileNavbar = ({ siteMetadata }) => {
                   </span>
                 </Link>
               </li>
+              <li
+                css={(theme) => ({
+                  listStyleType: "none",
+                  margin: "0",
+                  padding: "0",
+                })}
+              >
+                <a
+                  href={yelpUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  css={(theme) => css`
+                    text-decoration: none;
+                    color: ${theme.colors.yelpRed};
+                    &:hover {
+                      color: white;
+                    }
+                  `}
+                >
+                  <StaticImage
+                    src="../../images/yelp-logo.png"
+                    alt="yelp logo"
+                    placeholder="blurred"
+                    layout="fixed"
+                    height={35}
+                  />
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -240,7 +268,7 @@ const MobileNavbar = ({ siteMetadata }) => {
               &:hover {
                 color: ${theme.colors.accent};
               }
-              `}
+            `}
           >
             {/* ({
               fontSize: "1.5rem",

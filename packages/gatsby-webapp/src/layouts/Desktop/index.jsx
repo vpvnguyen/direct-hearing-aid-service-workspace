@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { css } from "@emotion/react";
-import { FaYelp } from "@react-icons/all-files/fa/FaYelp";
+// import { FaYelp } from "@react-icons/all-files/fa/FaYelp";
 import "@styles/reset.joshwcomeau.css";
 import Footer from "@layouts/Footer";
 
@@ -76,7 +76,14 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
               }
             `}
           >
-            <FaYelp size="1.5rem" />
+            {/* <FaYelp size="1.5rem" /> */}
+            <StaticImage
+              src="../../images/yelp-logo.png"
+              alt="yelp logo"
+              placeholder="blurred"
+              layout="fixed"
+              height={30}
+            />
           </a>
         </div>
         <div
