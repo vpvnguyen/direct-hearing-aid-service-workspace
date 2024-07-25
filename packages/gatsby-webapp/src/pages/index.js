@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
           <Animate transition={{ duration: 1 }}>
             <ul>
               <li>
-                We have over 20 years of experience in hearing aid services
+                We have over 30 years of experience in hearing aid services
               </li>
               <li>Factory trained & certified technicians</li>
               <li>Quality and timely repairs</li>

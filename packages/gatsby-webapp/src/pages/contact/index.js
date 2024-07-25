@@ -56,6 +56,7 @@ const Contact = () => {
               <p>{address?.line1}</p>
               <p>{address?.line2}</p>
               <p>{businessHours}</p>
+              <p>Saturday by appointment</p>
             </div>
             <div>
               <p>
