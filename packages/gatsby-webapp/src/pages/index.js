@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
             </li>
             <li>
               Extended "Worry-Free" Warranty on our hearing aid repair service
-              available for an additional six months - <b>$129.99</b>
+              available for an additional six months
             </li>
           </ul>
         </Animate>
