@@ -60,7 +60,7 @@ const Services = ({ data }) => {
           <h2>Ready to get started?</h2>
           <ul css={(theme) => ({ paddingTop: "1rem" })}>
             <li>
-              <span css={(theme) => ({ display: "flex", gap: "0.25rem" })}>
+              <span css={(theme) => ({ display: "flex", gap: "0.25rem", flexWrap: 'wrap' })}>
                 Download and fill out our repair form: <RepairForm />
               </span>
             </li>

@@ -30,7 +30,7 @@ const ServiceTemplate = ({ pageContext }) => {
           <h3>Ready to get started?</h3>
           <ul>
             <li>
-              <span css={(theme) => ({ display: "flex", gap: "0.25rem" })}>
+              <span css={(theme) => ({ display: "flex", gap: "0.25rem", flexWrap: 'wrap' })}>
                 Download and fill out our repair form: <RepairForm />
               </span>
             </li>
