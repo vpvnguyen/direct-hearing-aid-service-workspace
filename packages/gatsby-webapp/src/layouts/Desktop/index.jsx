@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { css } from "@emotion/react";
-// import { FaYelp } from "@react-icons/all-files/fa/FaYelp";
 import "@styles/reset.joshwcomeau.css";
 import Footer from "@layouts/Footer";
+import TelephoneLink from "@components/TelephoneLink";
+import EmailLink from "@components/EmailLink";
 
 const DesktopLayout = ({ children, siteMetadata = {} }) => {
   const { yelpUrl } = siteMetadata;
@@ -39,7 +40,14 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
                 paddingLeft: "0.75rem",
               })}
             >
-              {siteMetadata?.phone?.primaryDescription}
+              <TelephoneLink
+                number={siteMetadata?.phone?.primary}
+                css={(theme) => ({
+                  all: "unset",
+                })}
+              >
+                {siteMetadata?.phone?.primaryDescription}
+              </TelephoneLink>
             </span>
           </p>
           <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -50,7 +58,14 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
                 paddingLeft: "0.75rem",
               })}
             >
-              {siteMetadata?.phone?.secondaryDescription}
+              <TelephoneLink
+                number={siteMetadata?.phone?.secondary}
+                css={(theme) => ({
+                  all: "unset",
+                })}
+              >
+                {siteMetadata?.phone?.secondaryDescription}
+              </TelephoneLink>
             </span>
           </p>
           <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -61,7 +76,12 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
                 paddingLeft: "0.75rem",
               })}
             >
-              {siteMetadata?.email}
+              <EmailLink
+                email={siteMetadata?.email}
+                css={(theme) => ({
+                  all: "unset",
+                })}
+              />
             </span>
           </p>
           <a
@@ -76,7 +96,6 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
               }
             `}
           >
-            {/* <FaYelp size="1.5rem" /> */}
             <StaticImage
               src="../../images/yelp-logo.png"
               alt="yelp logo"

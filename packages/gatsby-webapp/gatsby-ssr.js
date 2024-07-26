@@ -13,6 +13,7 @@ export const wrapPageElement = ({ element, props }) => {
         src="https://www.yelp.com/embed/widgets.js"
         strategy="post-hydrate"
         onLoad={() => console.log(`yelp loaded`)}
+        onError={(error) => console.log(`yelp errror`, { error })}
       />
     </Layout>
   );

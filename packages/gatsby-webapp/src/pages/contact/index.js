@@ -5,22 +5,13 @@ import GoogleMapsEmbed from "@components/GoogleMapsEmbed";
 import FacebookEmbed from "@components/FacebookEmbed";
 import YelpEmbed from "@components/YelpEmbed";
 import Hero from "@components/Hero";
+import TelephoneLink from "@components/TelephoneLink";
+import EmailLink from "@components/EmailLink";
 import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
 
 const Contact = () => {
   const { siteMetadata } = useSiteMetadata();
   const { address, businessHours, email, phone } = siteMetadata;
-  
-  const convertToTelephoneNumber = (phone) => {
-    let parsed = phone;
-    try {
-      const convertedNumber = phone?.split("-").join("");
-      parsed = convertedNumber;
-    } catch (error) {
-      console.error(`Error converting phone number: ${phone}`);
-    }
-    return parsed;
-  };
 
   return (
     <>
@@ -52,27 +43,39 @@ const Contact = () => {
               gap: "1rem",
             })}
           >
-            <div>
+            <div
+              css={(theme) => ({
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem",
+              })}
+            >
               <p>{address?.line1}</p>
               <p>{address?.line2}</p>
               <p>{businessHours}</p>
               <p>Saturday by appointment</p>
             </div>
-            <div>
+            <div
+              css={(theme) => ({
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem",
+              })}
+            >
               <p>
-                Email: <a href={`mailto:${email}`}>{email}</a>
+                Email: <EmailLink email={email} />
               </p>
               <p>
                 Call:{" "}
-                <a href={`tel:${convertToTelephoneNumber(phone?.primary)}`}>
+                <TelephoneLink number={phone?.primary}>
                   {phone?.primaryDescription}
-                </a>{" "}
+                </TelephoneLink>
               </p>
               <p>
                 Call:{" "}
-                <a href={`tel:${convertToTelephoneNumber(phone?.secondary)}`}>
+                <TelephoneLink number={phone?.primary}>
                   {phone?.secondaryDescription}
-                </a>{" "}
+                </TelephoneLink>
               </p>
             </div>
           </div>

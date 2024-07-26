@@ -7,6 +7,8 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import { FcHome } from "@react-icons/all-files/fc/FcHome";
 import { FcSupport } from "@react-icons/all-files/fc/FcSupport";
 import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
+import EmailLink from "@components/EmailLink";
+import TelephoneLink from "@components/TelephoneLink";
 
 const MobileNavbar = ({ siteMetadata }) => {
   const { yelpUrl } = siteMetadata;
@@ -93,7 +95,9 @@ const MobileNavbar = ({ siteMetadata }) => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  {siteMetadata?.phone?.primaryDescription}
+                  <TelephoneLink number={siteMetadata?.phone?.primary}>
+                    {siteMetadata?.phone?.primaryDescription}
+                  </TelephoneLink>
                 </span>
               </p>
               <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -103,7 +107,9 @@ const MobileNavbar = ({ siteMetadata }) => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  {siteMetadata?.phone?.secondaryDescription}
+                  <TelephoneLink number={siteMetadata?.phone?.secondary}>
+                    {siteMetadata?.phone?.secondaryDescription}
+                  </TelephoneLink>
                 </span>
               </p>
               <p css={(theme) => ({ color: theme.colors.indigoLight })}>
@@ -113,7 +119,7 @@ const MobileNavbar = ({ siteMetadata }) => {
                     paddingLeft: "0.75rem",
                   })}
                 >
-                  {siteMetadata?.email}
+                  <EmailLink email={siteMetadata?.email} />
                 </span>
               </p>
             </div>
