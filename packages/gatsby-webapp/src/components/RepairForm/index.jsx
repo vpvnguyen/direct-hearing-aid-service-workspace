@@ -13,19 +13,24 @@ const RepairForm = ({ displayName = "" }) => {
           name
           size
           publicURL
+          modifiedTime
+          prettySize
+          ctime
         }
       }
     }
   `);
-  const [repairForm] =
-    data?.allFile?.nodes?.filter((file) => file?.name === "repair-form") || [];
-  const { name, ext, size, publicURL } = repairForm || {};
+  const [repairForm = null] =
+    data?.allFile?.nodes?.filter((file) => file) || [];
+  const { name, ext, size, publicURL, prettySize, modifiedTime } = repairForm || {};
 
+  if (!repairForm) return null
   return (
     <span css={(theme) => ({ display: "flex", gap: "0.25rem" })}>
       <a
         css={(theme) => ({ display: "flex", gap: "0.25rem" })}
         href={publicURL}
+        data-modifiedtime={modifiedTime}
         download
       >
         {displayName ? displayName : `${name}${ext}`}{" "}
@@ -37,7 +42,7 @@ const RepairForm = ({ displayName = "" }) => {
           `}
         />
       </a>
-      <span css={(theme) => ({ fontSize: "0.75rem" })}>{`(${formatBytes(
+      <span css={(theme) => ({ fontSize: "0.75rem" })}>{prettySize ? `(${prettySize})` : `(${formatBytes(
         size
       )})`}</span>
     </span>
