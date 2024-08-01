@@ -9,7 +9,6 @@ import { useSiteMetadata } from "@utils/useSiteMetadata";
 const Layout = (props) => {
   const breakpoints = useBreakpoint();
   const { siteMetadata } = useSiteMetadata();
-  console.log(`DEBUG layout`, { props })
   return (
     <>
       <Global

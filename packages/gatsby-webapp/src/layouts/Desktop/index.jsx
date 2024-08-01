@@ -11,7 +11,6 @@ import EmailLink from "@components/EmailLink";
 const DesktopLayout = ({ children, location, path, siteMetadata = {} }) => {
   const { yelpUrl } = siteMetadata;
   const { pathname } = useLocation();
-  console.log(`DEBUG location`, { propsLoc: location, pathname });
   return (
     <div
       id="desktop-layout"
