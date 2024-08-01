@@ -8,7 +8,7 @@ import Footer from "@layouts/Footer";
 import TelephoneLink from "@components/TelephoneLink";
 import EmailLink from "@components/EmailLink";
 
-const DesktopLayout = ({ children, siteMetadata = {} }) => {
+const DesktopLayout = ({ children, path, uri, siteMetadata = {} }) => {
   const { yelpUrl } = siteMetadata;
   const location = useLocation();
   console.log(`DEBUG location`, { location });
@@ -138,11 +138,11 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
               to="/"
               css={(theme) => ({
                 color:
-                  location.pathname === "/"
+                  location.pathname === uri
                     ? theme.colors.accent
                     : theme.colors.indigo,
                 borderBottom:
-                  location.pathname === "/"
+                  location.pathname === uri
                     ? `1px solid ${theme.colors.accent}`
                     : "none",
                 "&:hover": {
@@ -172,11 +172,11 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
               to="/contact"
               css={(theme) => ({
                 color:
-                  location.pathname === "/contact/"
+                  location.pathname.match(/contact/)
                     ? theme.colors.accent
                     : theme.colors.indigo,
                 borderBottom:
-                  location.pathname === "/contact/"
+                  location.pathname.match(/contact/)
                     ? `1px solid ${theme.colors.accent}`
                     : "none",
                 "&:hover": {
