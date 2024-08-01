@@ -8,10 +8,10 @@ import Footer from "@layouts/Footer";
 import TelephoneLink from "@components/TelephoneLink";
 import EmailLink from "@components/EmailLink";
 
-const DesktopLayout = ({ children, path, uri, siteMetadata = {} }) => {
+const DesktopLayout = ({ children, location, path, siteMetadata = {} }) => {
   const { yelpUrl } = siteMetadata;
-  const location = useLocation();
-  console.log(`DEBUG location`, { location });
+  const { pathname } = useLocation();
+  console.log(`DEBUG location`, { propsLoc: location, pathname });
   return (
     <div
       id="desktop-layout"
@@ -138,11 +138,11 @@ const DesktopLayout = ({ children, path, uri, siteMetadata = {} }) => {
               to="/"
               css={(theme) => ({
                 color:
-                  location.pathname === uri
+                  location.pathname === pathname && path === "/"
                     ? theme.colors.accent
                     : theme.colors.indigo,
                 borderBottom:
-                  location.pathname === uri
+                  location.pathname === pathname && path === "/"
                     ? `1px solid ${theme.colors.accent}`
                     : "none",
                 "&:hover": {
@@ -171,14 +171,12 @@ const DesktopLayout = ({ children, path, uri, siteMetadata = {} }) => {
             <Link
               to="/contact"
               css={(theme) => ({
-                color:
-                  location.pathname.match(/contact/)
-                    ? theme.colors.accent
-                    : theme.colors.indigo,
-                borderBottom:
-                  location.pathname.match(/contact/)
-                    ? `1px solid ${theme.colors.accent}`
-                    : "none",
+                color: location.pathname.match(/contact/)
+                  ? theme.colors.accent
+                  : theme.colors.indigo,
+                borderBottom: location.pathname.match(/contact/)
+                  ? `1px solid ${theme.colors.accent}`
+                  : "none",
                 "&:hover": {
                   color: theme.colors.accent,
                 },

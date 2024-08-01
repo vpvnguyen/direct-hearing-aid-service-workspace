@@ -11,9 +11,9 @@ import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
 import EmailLink from "@components/EmailLink";
 import TelephoneLink from "@components/TelephoneLink";
 
-const MobileNavbar = ({ uri, siteMetadata }) => {
+const MobileNavbar = ({ location, path, siteMetadata }) => {
   const { yelpUrl } = siteMetadata;
-  const location = useLocation();
+  const { pathname } = useLocation();
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -188,7 +188,7 @@ const MobileNavbar = ({ uri, siteMetadata }) => {
                     css={(theme) => ({
                       color: theme.colors.white,
                       borderBottom:
-                        location.pathname === uri
+                        location.pathname === pathname && path === "/"
                           ? `1px solid ${theme.colors.white}`
                           : "none",
                       "&:hover": {
@@ -221,7 +221,7 @@ const MobileNavbar = ({ uri, siteMetadata }) => {
                   <span
                     css={(theme) => ({
                       color: theme.colors.white,
-                      borderBottom: location.pathname.match(/services/)
+                      borderBottom: pathname.match(/services/)
                         ? `1px solid ${theme.colors.white}`
                         : "none",
                       "&:hover": {
@@ -254,7 +254,7 @@ const MobileNavbar = ({ uri, siteMetadata }) => {
                   <span
                     css={(theme) => ({
                       color: theme.colors.white,
-                      borderBottom: location.pathname.match(/contact/)
+                      borderBottom: pathname.match(/contact/)
                         ? `1px solid ${theme.colors.white}`
                         : "none",
                       "&:hover": {

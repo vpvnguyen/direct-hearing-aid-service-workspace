@@ -3,13 +3,13 @@ import "@styles/reset.joshwcomeau.css";
 import MobileNavbar from "@layouts/Mobile/MobileNavbar";
 import Footer from '@layouts/Footer'
 
-const MobileLayout = ({ children, uri, siteMetadata }) => {
+const MobileLayout = ({ children, location, path, siteMetadata }) => {
   return (
     <div
       id="mobile-layout"
       css={(theme) => ({ fontFamily: theme.fonts.fontFamily, margin: 0 })}
     >
-      <MobileNavbar uri={uri} siteMetadata={siteMetadata} />
+      <MobileNavbar location={location} path={path} siteMetadata={siteMetadata} />
       <main
         css={(theme) => ({
           minHeight: "75vh",
