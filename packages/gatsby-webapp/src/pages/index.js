@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
       </Hero>
       <ContentContainer>
         <Animate>
-          <h1>What To Know</h1>
+          <h1 css={(theme) => ({ paddingBottom: "1rem" })}>What To Know</h1>
         </Animate>
         <Animate transition={{ duration: 1.5 }}>
           <ul css={(theme) => ({ paddingTop: "1rem" })}>
@@ -72,9 +72,10 @@ const IndexPage = ({ data }) => {
           </ul>
         </Animate>
       </ContentContainer>
+      <br />
       <ContentContainer>
         <Animate>
-          <h1 css={(theme) => ({ paddingBottom: "2rem" })}>What We Offer</h1>
+          <h1 css={(theme) => ({ paddingBottom: "3rem" })}>What We Offer</h1>
         </Animate>
         <div
           css={(theme) => ({
@@ -104,9 +105,10 @@ const IndexPage = ({ data }) => {
             ))}
         </div>
       </ContentContainer>
+      <br />
       <ContentContainer>
         <Animate>
-          <h1 css={(theme) => ({ paddingBottom: "2rem" })}>
+          <h1 css={(theme) => ({ paddingBottom: "3rem" })}>
             What Our Customers Think
           </h1>
         </Animate>

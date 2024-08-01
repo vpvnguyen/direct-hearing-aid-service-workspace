@@ -128,6 +128,7 @@ const Contact = () => {
           <GoogleMapsEmbed style={{ width: "100%" }} />
         </div>
       </ContentContainer>
+      <br />
       <ContentContainer>
         <div
           css={(theme) => ({

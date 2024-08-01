@@ -57,10 +57,18 @@ const Services = ({ data }) => {
       </ContentContainer>
       <ContentContainer>
         <div>
-          <h1>Ready to get started?</h1>
-          <ul css={(theme) => ({ paddingTop: "1rem" })}>
+          <h1 css={(theme) => ({ paddingBottom: "2rem" })}>
+            Ready to get started?
+          </h1>
+          <ul>
             <li>
-              <span css={(theme) => ({ display: "flex", gap: "0.25rem", flexWrap: 'wrap' })}>
+              <span
+                css={(theme) => ({
+                  display: "flex",
+                  gap: "0.25rem",
+                  flexWrap: "wrap",
+                })}
+              >
                 Download and fill out our repair form: <RepairForm />
               </span>
             </li>
@@ -79,8 +87,10 @@ const Services = ({ data }) => {
         </div>
       </ContentContainer>
       <ContentContainer>
-        <h1>What You Can Expect</h1>
-        <ul type="disc" css={(theme) => ({ paddingTop: "1rem" })}>
+        <h1 css={(theme) => ({ paddingBottom: "2rem" })}>
+          What You Can Expect
+        </h1>
+        <ul type="disc">
           <li>24-48 hour turnaround on most repairs</li>
           <li>
             Factory trained &amp; certified technicians with 20+ years of
