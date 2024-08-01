@@ -1,7 +1,7 @@
 import React from "react";
 import { FcAssistant } from "@react-icons/all-files/fc/FcAssistant";
 import ContentContainer from "@layouts/Content";
-import { useSiteMetadata } from '@components/Metadata/useSiteMetadata'
+import { useSiteMetadata } from '@utils/useSiteMetadata'
 
 const Footer = () => {
   const { siteMetadata } = useSiteMetadata()

@@ -11,7 +11,6 @@ const FacebookEmbed = (props) => {
         border: "none",
         overflow: "hidden",
       }}
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       {...props}
     ></iframe>
   );

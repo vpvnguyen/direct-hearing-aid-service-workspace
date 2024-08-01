@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 import { StaticImage } from "gatsby-plugin-image";
 import { css } from "@emotion/react";
 import "@styles/reset.joshwcomeau.css";
@@ -9,6 +10,8 @@ import EmailLink from "@components/EmailLink";
 
 const DesktopLayout = ({ children, siteMetadata = {} }) => {
   const { yelpUrl } = siteMetadata;
+  const location = useLocation();
+  console.log(`DEBUG location`, { location });
   return (
     <div
       id="desktop-layout"
@@ -134,7 +137,14 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
             <Link
               to="/"
               css={(theme) => ({
-                color: theme.colors.indigo,
+                color:
+                  location.pathname === "/"
+                    ? theme.colors.accent
+                    : theme.colors.indigo,
+                borderBottom:
+                  location.pathname === "/"
+                    ? `1px solid ${theme.colors.accent}`
+                    : "none",
                 "&:hover": {
                   color: theme.colors.accent,
                 },
@@ -145,7 +155,12 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
             <Link
               to="/services"
               css={(theme) => ({
-                color: theme.colors.indigo,
+                color: location.pathname.match(/services/)
+                  ? theme.colors.accent
+                  : theme.colors.indigo,
+                borderBottom: location.pathname.match(/services/)
+                  ? `1px solid ${theme.colors.accent}`
+                  : "none",
                 "&:hover": {
                   color: theme.colors.accent,
                 },
@@ -156,7 +171,14 @@ const DesktopLayout = ({ children, siteMetadata = {} }) => {
             <Link
               to="/contact"
               css={(theme) => ({
-                color: theme.colors.indigo,
+                color:
+                  location.pathname === "/contact/"
+                    ? theme.colors.accent
+                    : theme.colors.indigo,
+                borderBottom:
+                  location.pathname === "/contact/"
+                    ? `1px solid ${theme.colors.accent}`
+                    : "none",
                 "&:hover": {
                   color: theme.colors.accent,
                 },

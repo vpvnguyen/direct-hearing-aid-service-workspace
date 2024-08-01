@@ -4,7 +4,7 @@ import Animate from "@components/Animate";
 import Hero from "@components/Hero";
 import { ContentContainer } from "@layouts";
 import Link from "@components/Link";
-import Metadata from "@components/Metadata";
+import Helmet from "@components/Helmet";
 import YelpEmbed from "@components/YelpEmbed";
 
 const IndexPage = ({ data }) => {
@@ -87,7 +87,10 @@ const IndexPage = ({ data }) => {
         >
           {data &&
             data?.allMdx?.nodes?.map(({ frontmatter }, index) => (
-              <Animate key={frontmatter?.slug} transition={{ duration: index / 3 }}>
+              <Animate
+                key={frontmatter?.slug}
+                transition={{ duration: index / 3 }}
+              >
                 <Link
                   to={frontmatter?.slug}
                   css={(theme) => ({
@@ -128,7 +131,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const Head = ({ location }) => {
-  return <Metadata location={location} />;
+  return <Helmet location={location} />;
 };
 
 export const query = graphql`

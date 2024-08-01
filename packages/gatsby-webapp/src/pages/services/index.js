@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql, Link as GatsbyLink } from "gatsby";
+import { css } from "@emotion/react";
 import { ContentContainer } from "@layouts";
 import Hero from "@components/Hero";
 import Link from "@components/Link";
-import { css } from "@emotion/react";
-import Metadata from "@components/Metadata";
+import Helmet from "@components/Helmet";
 import RepairForm from "@components/RepairForm";
 
 const Services = ({ data }) => {
@@ -29,7 +29,7 @@ const Services = ({ data }) => {
             gap: "0.75rem",
             background: "#fff",
             border: "1px solid #e5e5e5",
-            padding: "40px",
+            padding: "3rem",
           })}
         >
           {data?.allMdx?.nodes?.map(({ frontmatter }) => (
@@ -57,7 +57,7 @@ const Services = ({ data }) => {
       </ContentContainer>
       <ContentContainer>
         <div>
-          <h2>Ready to get started?</h2>
+          <h1>Ready to get started?</h1>
           <ul css={(theme) => ({ paddingTop: "1rem" })}>
             <li>
               <span css={(theme) => ({ display: "flex", gap: "0.25rem", flexWrap: 'wrap' })}>
@@ -107,7 +107,7 @@ const Services = ({ data }) => {
 export const Head = ({ location }) => {
   return (
     <>
-      <Metadata location={location} />
+      <Helmet location={location} />
     </>
   );
 };

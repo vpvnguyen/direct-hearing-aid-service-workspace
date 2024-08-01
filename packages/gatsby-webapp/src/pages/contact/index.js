@@ -1,13 +1,17 @@
 import React from "react";
+import { FiMapPin } from "@react-icons/all-files/fi/FiMapPin";
+import { MdAccessTime } from "@react-icons/all-files/md/MdAccessTime";
+import { BiSupport } from "@react-icons/all-files/bi/BiSupport";
 import { ContentContainer } from "@layouts";
-import Metadata from "@components/Metadata";
+import Helmet from "@components/Helmet";
 import GoogleMapsEmbed from "@components/GoogleMapsEmbed";
 import FacebookEmbed from "@components/FacebookEmbed";
 import YelpEmbed from "@components/YelpEmbed";
 import Hero from "@components/Hero";
 import TelephoneLink from "@components/TelephoneLink";
 import EmailLink from "@components/EmailLink";
-import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
+import { useSiteMetadata } from "@utils/useSiteMetadata";
+import { theme } from "@styles/theme";
 
 const Contact = () => {
   const { siteMetadata } = useSiteMetadata();
@@ -32,7 +36,7 @@ const Contact = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            gap: "1rem",
+            gap: "3rem",
           })}
         >
           <h1>Our Location</h1>
@@ -41,42 +45,84 @@ const Contact = () => {
               display: "flex",
               justifyContent: "space-between",
               gap: "1rem",
+              flexWrap: "wrap",
             })}
           >
             <div
               css={(theme) => ({
                 display: "flex",
                 flexDirection: "column",
-                gap: "0.5rem",
+                gap: "0.75rem",
               })}
             >
-              <p>{address?.line1}</p>
-              <p>{address?.line2}</p>
-              <p>{businessHours}</p>
-              <p>Saturday by appointment</p>
-            </div>
-            <div
-              css={(theme) => ({
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-              })}
-            >
-              <p>
-                Email: <EmailLink email={email} />
-              </p>
-              <p>
-                Call:{" "}
-                <TelephoneLink number={phone?.primary}>
-                  {phone?.primaryDescription}
-                </TelephoneLink>
-              </p>
-              <p>
-                Call:{" "}
-                <TelephoneLink number={phone?.primary}>
-                  {phone?.secondaryDescription}
-                </TelephoneLink>
-              </p>
+              <div
+                css={(theme) => ({
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                })}
+              >
+                <FiMapPin size="2rem" color={theme.colors.accent} />
+                <div>
+                  <p>{address?.line1}</p>
+                  <p>{address?.line2}</p>
+                </div>
+              </div>
+              <hr
+                css={(theme) => ({
+                  borderStyle: "dashed",
+                  borderWidth: "0.5px",
+                  width: "75%",
+                  margin: "auto",
+                })}
+              />
+              <div
+                css={(theme) => ({
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                })}
+              >
+                <MdAccessTime size="2rem" color={theme.colors.accent} />
+                <div>
+                  <p>{businessHours}</p>
+                  <p>Saturday by appointment</p>
+                </div>
+              </div>
+              <hr
+                css={(theme) => ({
+                  borderStyle: "dashed",
+                  borderWidth: "0.5px",
+                  width: "75%",
+                  margin: "auto",
+                })}
+              />
+              <div
+                css={(theme) => ({
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                })}
+              >
+                <BiSupport size="2rem" color={theme.colors.accent} />
+                <div>
+                  <p>
+                    Email: <EmailLink email={email} />
+                  </p>
+                  <p>
+                    Call:{" "}
+                    <TelephoneLink number={phone?.primary}>
+                      {phone?.primaryDescription}
+                    </TelephoneLink>
+                  </p>
+                  <p>
+                    Call:{" "}
+                    <TelephoneLink number={phone?.primary}>
+                      {phone?.secondaryDescription}
+                    </TelephoneLink>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           <GoogleMapsEmbed style={{ width: "100%" }} />
@@ -88,18 +134,26 @@ const Contact = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            gap: "2rem",
+            gap: "3rem",
           })}
         >
           <h1>Our Social</h1>
-          <div>
-            <h3 css={(theme) => ({ paddingBottom: "0.5rem" })}>Facebook:</h3>
+          <div
+            css={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+            })}
+          >
+            <b css={(theme) => ({ paddingBottom: "0.5rem" })}>Facebook:</b>
             <FacebookEmbed />
           </div>
-          <div>
-            <h3 css={(theme) => ({ paddingBottom: "0.5rem" })}>
-              Yelp Reviews:
-            </h3>
+          <div
+            css={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+            })}
+          >
+            <b css={(theme) => ({ paddingBottom: "0.5rem" })}>Yelp Reviews:</b>
             <YelpEmbed />
           </div>
         </div>
@@ -111,7 +165,7 @@ const Contact = () => {
 export const Head = ({ location }) => {
   return (
     <>
-      <Metadata location={location} />
+      <Helmet location={location} />
     </>
   );
 };

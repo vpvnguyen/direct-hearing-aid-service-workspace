@@ -1,6 +1,6 @@
 // https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-seo-component/
 import * as React from "react";
-import { useSiteMetadata } from "@components/Metadata/useSiteMetadata";
+import { useSiteMetadata } from "@utils/useSiteMetadata";
 
 export const SEO = () => {
   const { siteMetadata } = useSiteMetadata();

@@ -1,7 +1,6 @@
-// <div css={theme => ({ color: theme.colors.primary })}>some other text</div>
-
 export const theme = {
   colors: {
+    // colors
     blue: "#0d6efd",
     indigo: "#2c2a49",
     indigoLight: "#a5a4b3",
@@ -16,7 +15,7 @@ export const theme = {
     white: "#fff",
     gray: "#6c757d",
     grayDark: "#343a40",
-    //
+    // system
     // accent: "#ff7558",
     accent: "#d5573c",
     primary: "#0d6efd",
@@ -27,9 +26,9 @@ export const theme = {
     danger: "#dc3545",
     light: "#f8f9fa",
     dark: "#212529",
-    //
-    yelpRed: '#f40e14',
-    // 
+    // brand
+    yelpRed: "#f40e14",
+    // effects
     gradient: "linear-gradient(180deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0))",
   },
   fonts: {

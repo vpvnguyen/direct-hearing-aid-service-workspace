@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { css } from "@emotion/react";
 
 const Breadcrumbs = ({ breadcrumbs = [] }) => {
   if (!breadcrumbs?.length) return null;
@@ -7,7 +8,8 @@ const Breadcrumbs = ({ breadcrumbs = [] }) => {
     <div
       css={(theme) => ({
         display: "flex",
-        gap: "0.5rem",
+        alignItems: "center",
+        gap: "1rem",
       })}
     >
       {breadcrumbs.map(({ name, path }, index) => (
@@ -15,11 +17,22 @@ const Breadcrumbs = ({ breadcrumbs = [] }) => {
           key={path}
           css={(theme) => ({
             display: "flex",
-            gap: "0.5rem",
+            gap: "1rem",
           })}
         >
-          <Link to={path}>{name}</Link>
-          {breadcrumbs?.length > index + 1 ? <span>{">"}</span> : null}
+          <Link
+            to={path}
+            css={css`
+              &:hover {
+                border-bottom: 1px solid black;
+              }
+            `}
+          >
+            {name}
+          </Link>
+          {breadcrumbs?.length > index + 1 ? (
+            <span css={(theme) => ({ fontSize: "1.25rem" })}>{">"}</span>
+          ) : null}
         </div>
       ))}
     </div>

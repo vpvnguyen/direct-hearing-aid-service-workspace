@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { useLocation } from "@reach/router";
 import { css } from "@emotion/react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { FcHome } from "@react-icons/all-files/fc/FcHome";
@@ -12,6 +13,7 @@ import TelephoneLink from "@components/TelephoneLink";
 
 const MobileNavbar = ({ siteMetadata }) => {
   const { yelpUrl } = siteMetadata;
+  const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -182,7 +184,18 @@ const MobileNavbar = ({ siteMetadata }) => {
                   onClick={closeMenuOnMobile}
                 >
                   <FcHome size="1.5rem" />{" "}
-                  <span css={(theme) => ({ color: theme.colors.white })}>
+                  <span
+                    css={(theme) => ({
+                      color: theme.colors.white,
+                      borderBottom:
+                        location.pathname === "/"
+                          ? `1px solid ${theme.colors.white}`
+                          : "none",
+                      "&:hover": {
+                        borderBottom: `1px solid ${theme.colors.white}`,
+                      },
+                    })}
+                  >
                     Home
                   </span>
                 </Link>
@@ -205,7 +218,17 @@ const MobileNavbar = ({ siteMetadata }) => {
                   onClick={closeMenuOnMobile}
                 >
                   <FcSupport size="1.5rem" />{" "}
-                  <span css={(theme) => ({ color: theme.colors.white })}>
+                  <span
+                    css={(theme) => ({
+                      color: theme.colors.white,
+                      borderBottom: location.pathname.match(/services/)
+                        ? `1px solid ${theme.colors.white}`
+                        : "none",
+                      "&:hover": {
+                        borderBottom: `1px solid ${theme.colors.white}`,
+                      },
+                    })}
+                  >
                     Services
                   </span>
                 </Link>
@@ -228,7 +251,18 @@ const MobileNavbar = ({ siteMetadata }) => {
                   onClick={closeMenuOnMobile}
                 >
                   <FcAssistant size="1.5rem" />
-                  <span css={(theme) => ({ color: theme.colors.white })}>
+                  <span
+                    css={(theme) => ({
+                      color: theme.colors.white,
+                      borderBottom:
+                        location.pathname === "/contact/"
+                          ? `1px solid ${theme.colors.white}`
+                          : "none",
+                      "&:hover": {
+                        borderBottom: `1px solid ${theme.colors.white}`,
+                      },
+                    })}
+                  >
                     Contact
                   </span>
                 </Link>

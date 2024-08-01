@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { ContentContainer } from "@layouts";
-import Metadata from "@components/Metadata";
+import Helmet from "@components/Helmet";
 import Breadcrumbs from "@components/Breadcrumbs";
 import RepairForm from "@components/RepairForm";
 
@@ -21,16 +21,28 @@ const ServiceTemplate = ({ pageContext }) => {
         css={(theme) => ({
           display: "flex",
           flexDirection: "column",
-          gap: "2rem",
+          gap: "3rem",
         })}
       >
         <Breadcrumbs breadcrumbs={breadcrumbs} />
         <div dangerouslySetInnerHTML={{ __html: data }} />
-        <div>
+        <div
+          css={(theme) => ({
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+          })}
+        >
           <h3>Ready to get started?</h3>
           <ul>
             <li>
-              <span css={(theme) => ({ display: "flex", gap: "0.25rem", flexWrap: 'wrap' })}>
+              <span
+                css={(theme) => ({
+                  display: "flex",
+                  gap: "0.25rem",
+                  flexWrap: "wrap",
+                })}
+              >
                 Download and fill out our repair form: <RepairForm />
               </span>
             </li>
@@ -55,7 +67,7 @@ const ServiceTemplate = ({ pageContext }) => {
 export const Head = ({ location, pageContext: { title } }) => {
   return (
     <>
-      <Metadata title={title} location={location} />
+      <Helmet title={title} location={location} />
     </>
   );
 };

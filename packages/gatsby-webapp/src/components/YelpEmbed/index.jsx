@@ -102,6 +102,8 @@ const ThirdReview = () => (
   </span>
 );
 
+export const YelpScript = () => <script src="https://www.yelp.com/embed/widgets.js" type="text/javascript" async></script>
+
 const YelpEmbed = () => {
   return (
     <>

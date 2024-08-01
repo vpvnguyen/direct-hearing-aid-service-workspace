@@ -1,8 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { css } from "@emotion/react";
 import { GrDocumentPdf } from "@react-icons/all-files/gr/GrDocumentPdf";
 import { formatBytes } from "@utils/formatBytes";
-import { css } from "@emotion/react";
 
 const RepairForm = ({ displayName = "" }) => {
   const data = useStaticQuery(graphql`
@@ -22,13 +22,20 @@ const RepairForm = ({ displayName = "" }) => {
   `);
   const [repairForm = null] =
     data?.allFile?.nodes?.filter((file) => file) || [];
-  const { name, ext, size, publicURL, prettySize, modifiedTime } = repairForm || {};
+  const { name, ext, size, publicURL, prettySize, modifiedTime } =
+    repairForm || {};
 
-  if (!repairForm) return null
+  if (!repairForm) return null;
   return (
     <span css={(theme) => ({ display: "flex", gap: "0.25rem" })}>
       <a
-        css={(theme) => ({ display: "flex", gap: "0.25rem" })}
+        css={css`
+          display: flex;
+          gap: 0.25rem;
+          &:hover {
+            text-decoration: underline !important;
+          }
+        `}
         href={publicURL}
         data-modifiedtime={modifiedTime}
         download
@@ -42,9 +49,9 @@ const RepairForm = ({ displayName = "" }) => {
           `}
         />
       </a>
-      <span css={(theme) => ({ fontSize: "0.75rem" })}>{prettySize ? `(${prettySize})` : `(${formatBytes(
-        size
-      )})`}</span>
+      <span css={(theme) => ({ fontSize: "0.75rem" })}>
+        {prettySize ? `(${prettySize})` : `(${formatBytes(size)})`}
+      </span>
     </span>
   );
 };
