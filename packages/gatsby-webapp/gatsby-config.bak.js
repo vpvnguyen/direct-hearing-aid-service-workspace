@@ -4,7 +4,7 @@ const path = require("path");
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/direct-hearing-aid-service-workspace",
+  // pathPrefix: "/direct-hearing-aid-service-workspace",
   siteMetadata: {
     title: `Direct Hearing Aid Services`,
     siteUrl: "https://vincentnguyen.dev/",

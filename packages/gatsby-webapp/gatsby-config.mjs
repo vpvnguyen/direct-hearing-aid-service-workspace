@@ -8,7 +8,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default {
-  pathPrefix: "/direct-hearing-aid-service-workspace",
+  // pathPrefix: "/direct-hearing-aid-service-workspace",
   siteMetadata: {
     title: `Direct Hearing Aid Services`,
     description:
